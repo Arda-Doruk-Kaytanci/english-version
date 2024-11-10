@@ -1,14 +1,46 @@
 .nav-container {
+    position: absolute;
+    top: 4vh;
     width: 100%;
     height: 40vh;
-    background: linear-gradient(135deg, #A5CC6B, #7FAF50);
     margin: 0;
-    clip-path: polygon(0% 0.0%, 0% 61.5%, 2% 67.5%, 5% 72.0%, 9% 75.0%, 13% 75.0%, 17% 73.5%, 20% 72.0%, 25% 69.0%, 29% 64.5%, 33% 60.0%, 37% 55.5%, 41% 49.5%, 43% 45.0%, 47% 37.5%, 50% 30.0%, 100% 30.0%, 100% 0.0%);
 }
+
+.custom-shape-container {
+    display: flex;
+}
+
+.custom-shape.arda {
+    display: inline-block;
+    width: 50vw;
+    height: 40vh;
+    margin: 0;
+    clip-path: ellipse(85% 100% at 25% 0);
+    background: linear-gradient(135deg, #A5CC6B, #7FAF50);
+}
+
+.border-wrapper {
+    position: relative;
+    width: calc(50vw + 4px);
+    height: calc(40vh + 4px);
+    clip-path: ellipse(85% 100% at 25% 0);
+    background: black;
+
+}
+
+.custom-shape.doruk {
+    outline: 3px solid black;
+    display: inline-block;
+    width: 50%;
+    height: 18.7vh;
+    margin: 0;
+    background: linear-gradient(135deg, #7FAF50, #A5CC6B);
+}
+
 
 .nav-container img {
     margin-top: 1vh;
-    margin-left: 4vw;
+    margin-left: 12vw;
     width: 15vw;
     height: 27.5vh;
     mix-blend-mode: multiply;
@@ -18,7 +50,7 @@
 
 nav {
     width: 45%;
-    height: 40%;
+    height: 20%;
     font-size: 1.4rem;
     margin-right: 2vw;
     align-items: center;

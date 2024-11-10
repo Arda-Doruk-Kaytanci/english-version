@@ -11,6 +11,12 @@ const NavBar = forwardRef((props, ref) => {
     }
     return (
         <>
+            <div className="custom-shape-container">
+                <div class="border-wrapper">
+                    <div className="custom-shape arda"></div>
+                </div>
+                <div className="custom-shape doruk"></div>
+            </div>
             <div className="nav-container">
                 <img alt="the logo" src={logoImg}></img>
                 <nav ref={ref}>
@@ -21,6 +27,7 @@ const NavBar = forwardRef((props, ref) => {
                     <Link className="nav-bar-link" to="/" style={{ color: isHere('/') ? "#34623F" : "#A1BA89" }}>Homepage</Link>
                 </nav>
             </div>
+
             <Routes>
                 <Route path="/" element={<HomePage />}></Route>
                 <Route path="/articles/article-1" element={<Article1 />}></Route>

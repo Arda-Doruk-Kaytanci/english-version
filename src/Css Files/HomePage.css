@@ -1,8 +1,23 @@
-.article-widget-container{
-    margin-left: 5vw;
+.article-widget-container {
     display: grid;
     row-gap: 10vh;
-    column-gap: 10vw;
     grid-template-columns: 40vw 40vw;
-    width: 90vw;
+    width: fit-content;
+}
+
+.flashbang {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-out;
+    z-index: 9999;
+}
+
+.flashbang.active {
+    opacity: 1;
 }
