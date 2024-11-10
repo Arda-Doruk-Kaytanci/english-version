@@ -1,0 +1,34 @@
+.nav-container {
+    width: 100%;
+    clip-path: polygon(0% 0.0%, 0% 61.5%, 2% 67.5%, 5% 72.0%, 9% 75.0%, 13% 75.0%, 17% 73.5%, 20% 72.0%, 25% 69.0%, 29% 64.5%, 33% 60.0%, 37% 55.5%, 41% 49.5%, 43% 45.0%, 47% 37.5%, 50% 30.0%, 100% 30.0%, 100% 0.0%);
+    height: 35vh;
+    background-color: #93b6a2;
+    margin: 0;
+}
+
+.nav-container img {
+    position: relative;
+    left: 2.5vw;
+    top: 0;
+    width: 15vw;
+    height: 27.5vh;
+    margin: 0;
+    padding: 0;
+    mix-blend-mode:multiply;
+}
+
+nav {
+    width: 50%;
+    height: 50%;
+    font-size: 1.5rem;
+    float: right;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-bar-link {
+    margin-top: 4%;
+    text-decoration: none;
+}.nav-bar-link:hover {
+    text-decoration: underline black;
+}
