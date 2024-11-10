@@ -1,0 +1,8 @@
+.article-widget-container{
+    margin-left: 5vw;
+    display: grid;
+    row-gap: 10vh;
+    column-gap: 10vw;
+    grid-template-columns: 40vw 40vw;
+    width: 90vw;
+}

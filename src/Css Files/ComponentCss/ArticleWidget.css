@@ -1,0 +1,19 @@
+.widget-link {
+    height: fit-content;
+    width: 40vw;
+    margin-top: 10vh;
+    text-align: center;
+    font-size: 1.4rem;
+    outline: 2px solid black;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+.widget-img {
+    width: 40vw;
+    height: 40vh;
+}
+figcaption{
+    color: #A1BA89;
+    margin-bottom: 1vh;
+}
