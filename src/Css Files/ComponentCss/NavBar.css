@@ -29,12 +29,13 @@
 }
 
 .custom-shape.doruk {
-    outline: 3px solid black;
+    border-bottom: 2px solid black;
     display: inline-block;
     width: 50%;
     height: 18.7vh;
     margin: 0;
-    background: linear-gradient(135deg, #7FAF50, #A5CC6B);
+    background: linear-gradient(495deg, #7FAF50, #A5CC6B);
+    rotate: 360deg;
 }
 
 

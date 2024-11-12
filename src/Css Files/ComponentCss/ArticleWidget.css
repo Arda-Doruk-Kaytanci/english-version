@@ -10,9 +10,7 @@
     overflow: hidden;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
     color: #173C28;
-    margin-left: 12.5vw;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .widget-link:hover {
@@ -29,7 +27,7 @@
     margin-right: 1vw;
 }
 
-figcaption {
+.widget-link>figure>figcaption {
     color: #A1BA89;
     font-style: italic;
     margin-top: 1vh;

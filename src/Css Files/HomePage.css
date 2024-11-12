@@ -1,8 +1,11 @@
 .article-widget-container {
+    margin-top: 8vh;
+    margin-left: 10vw;
     display: grid;
     row-gap: 10vh;
-    grid-template-columns: 40vw 40vw;
-    width: fit-content;
+    column-gap: 10vw;
+    grid-template-columns: 35vw 35vw;
+    width: 80vw;
 }
 
 .flashbang {
@@ -14,10 +17,126 @@
     background-color: white;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease-out;
+    transition: opacity 1s ease-out;
     z-index: 9999;
 }
 
 .flashbang.active {
+    animation: flash 1s ease-in-out;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.img {
+    border: 3px solid #B39C4D;
+    border-radius: 10%;
+    width: 55vw;
+    height: 60vh;
+    margin-left: 5vw;
+    transition: all 0.2s linear;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+.img.visible:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.img.visible {
     opacity: 1;
+    transform: translateY(0);
+}
+
+.warning-section-container {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 60vh;
+}
+
+.warning-section {
+    display: flex;
+    margin-bottom: 40vh;
+    flex-direction: column;
+}
+
+.warning-section>*>figcaption {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    color: #A1BA89;
+    font-style: italic;
+    text-shadow: 4px 4px 6px rgb(0, 0, 0);
+}
+
+.warning-section.right {
+    margin-top: 53vh;
+}
+
+.ribbon-container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ribbon {
+    margin: 0;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    --s: 1.8em;
+    --d: .8em;
+    --c: .8em;
+    padding: 0 calc(var(--s) + .5em) var(--d);
+    line-height: 1.8;
+    background:
+        conic-gradient(at left var(--s) bottom var(--d),
+            #0000 25%, #0008 0 37.5%, #0004 0) 0 /50% 100% no-repeat,
+        conic-gradient(at right var(--s) bottom var(--d),
+            #0004 62.5%, #0008 0 75%, #0000 0) 100%/50% 100% no-repeat;
+    clip-path: polygon(0 var(--d), var(--s) var(--d), var(--s) 0, calc(100% - var(--s)) 0, calc(100% - var(--s)) var(--d), 100% var(--d), calc(100% - var(--c)) calc(50% + var(--d)/2), 100% 100%, calc(100% - var(--s) - var(--d)) 100%, calc(100% - var(--s) - var(--d)) calc(100% - var(--d)), calc(var(--s) + var(--d)) calc(100% - var(--d)), calc(var(--s) + var(--d)) 100%, 0 100%, var(--c) calc(50% + var(--d)/2));
+    background-color: #607744;
+    width: fit-content;
+}
+
+.img.bottom>figure>figcaption {
+    margin-bottom: 3vh;
+}
+
+
+.arrowright {
+    border-top: black 4px dashed;
+    border-bottom: black 4px dashed;
+    width: 50vw;
+    height: 20vh;
+    background-color: #607744;
+}
+
+.arrowleft {
+    border-top: black 4px dashed;
+    border-bottom: black 4px dashed;
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    width: 50vw;
+    height: 20vh;
+    background-color: #607744;
+}
+
+.arrow-container {
+    display: flex;
 }
