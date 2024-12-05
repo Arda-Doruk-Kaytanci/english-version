@@ -1,11 +1,16 @@
 .article-widget-container {
     margin-top: 8vh;
-    margin-left: 10vw;
+    margin-left: 5vw;
     display: grid;
-    row-gap: 10vh;
     column-gap: 10vw;
-    grid-template-columns: 35vw 35vw;
-    width: 80vw;
+    row-gap: 10vh;
+    grid-template-columns: 40vw 40vw;
+    width: 90vw;
+}
+
+.article-widget-container> :nth-child(3) {
+    grid-column: 1 / span 2;
+    justify-self: center;
 }
 
 .flashbang {

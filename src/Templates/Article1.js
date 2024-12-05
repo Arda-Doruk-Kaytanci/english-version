@@ -3,11 +3,12 @@ import burdurImg from "../Images/burdur.png"
 import "../Css Files/Article1.css"
 function Article1() {
     return (
-        <>
-            <p id='x'>
+        <div className='article-1'>
+            <h1>
                 Ele alacağımız bu çalışmada, Burdur'un Ağlasun bölgesinde yer alan bazı memeli yaban hayvanlarının (Tilki, Porsuk, Yaban Tavşanı, Yaban Domuzu ve kaya sansarı) ekosistem içerisindeki dağılımları ile birbirleriyle ilişkileri araştırılmış ve bu türlerin ekosistem dengesi için bir gösterge olup olamayacağı gözlemlenmiştir. Bu araştırmanın amacı, ekosistemin dengede olduğunu gösteren memeli türlerin aynı alanda bulunma durumlarını incelemek ve bu türlerin birbirleriyle olan ilişkilerini analiz etmektir.
-            </p>
-            <img src={burdurImg} alt='Çalışma bölgesi olan burdurun haritası'></img>
+            </h1>
+            <h2>Çalışma Alanının Haritası</h2>
+            <img src={burdurImg} alt='Çalışma bölgesi olan burdurun haritası' className=''></img>
             <h1>Araştırma Alanı Ve Metodoloji</h1>
             <p>Çalışma, Isparta Orman Bölge Müdürlüğüne bağlı Burdur-Ağlasun yöresinde, 350 m ile 2200 m yükseklikleri arasındaki 70 örnek alanda yürütülmüştür. Bölgede Akdeniz iklimi görülürken, dağlık alanlar ve karasal iklime yakın özellikler de görülmektedir. Çalışma alanıları ise şunlardır: orman, tarım arazileri, açık alanlar ve yerleşim yerleridir. Burada avcılık faaliyetlerinin yoğun olması yaban hayvanlarının davranışlarını etkilemiştir.
                 <br>
@@ -52,7 +53,7 @@ function Article1() {
                 Bu çalışma, gösterge tür analizlerinin ekosistem yönetiminde nasıl kullanılabileceğine dair örnek sunmaktadır ve yaban hayatı yönetimi stratejilerinin geliştirilmesine katkı sağlamaktadır. Türlerin birbirleriyle olan ilişkilerini belirlemek için kullanılan analiz yöntemleri, ekolojik araştırmalarda daha geniş ölçekte uygulanabilir ve diğer bölgelerdeki tür dağılım çalışmalarına örnek teşkil edebilir.
             </p>
             <p>X adlı makalenin özetidir.</p>
-        </>
+        </div>
     )
 }
 export default Article1

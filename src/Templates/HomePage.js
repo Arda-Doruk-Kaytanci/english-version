@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../Css Files/HomePage.css";
 import ArticleWidget from "./Components/ArticleWidget";
-import article1Img from "../Images/burdur.png";
+import article1Img from "../Images/article1showcaseimage.png";
 import img3 from "../Images/forest3.png";
 import img4 from "../Images/deso5.png";
 import img5 from "../Images/deso2.png";
@@ -83,11 +83,11 @@ function HomePage() {
         <div>
             <Flashbang />
             <section className="article-widget-container">
-                <ArticleWidget link="/articles/article-1" name="Arda" img={article1Img} figcaption="Awdıajıodwakawd" />
-                <ArticleWidget link="/articles/article-1" name="Arda" img={article1Img} figcaption="Awdıajıodwakawd" />
-                <ArticleWidget link="/articles/article-1" name="Arda" img={article1Img} figcaption="Awdıajıodwakawd" />
-                <ArticleWidget link="/articles/article-1" name="Arda" img={article1Img} figcaption="Awdıajıodwakawd" />
+                <ArticleWidget link="/articles/article-1" name="Gösterge Türlerin Ekosistemdeki Rolü dair görsel" img={article1Img} figcaption="Gösterge Türlerin Ekosistemdeki Rolü" />
+                <ArticleWidget link="/articles/article-1" name="Gösterge Türlerin Ekosistemdeki Rolü dair görsel" img={article1Img} figcaption="Gösterge Türlerin Ekosistemdeki Rolü" />
+                <ArticleWidget  link="/articles/article-1" name="Gösterge Türlerin Ekosistemdeki Rolü dair görsel" img={article1Img} figcaption="Gösterge Türlerin Ekosistemdeki Rolü" />
             </section>
+
 
             <section className="warning-section-container">
                 <section className="warning-section left">
