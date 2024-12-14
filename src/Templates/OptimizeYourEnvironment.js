@@ -32,18 +32,21 @@ ChartJS.register(
 
 const OptimizationSystem = () => {
     const [inputs, setInputs] = useState({
-        floor: 0,
-        context_size: 100,
+        floor: 1,
+        area: 100,
         balcony_size: "",
+        devices: [],
     });
 
-    const [altitude, setAltitude] = useState()
+    const [altitude, setAltitude] = useState([])
+    const [weather, setWeather] = useState([])
 
     const [response, setResponse] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const [location, setLocation] = useState({});
+
 
     const [date, setDate] = useState({
         day: "",
@@ -59,7 +62,7 @@ const OptimizationSystem = () => {
         return `${year}-${paddedMonth}-${paddedDay}`;
     };
 
-    const [animalData, setAnimalData] = useState()
+    const [animalData, setAnimalData] = useState([])
     useEffect(() => {
         const time = new Date();
         const currentDate = {
@@ -120,7 +123,9 @@ const OptimizationSystem = () => {
                 },
             });
             console.log(response.data);
-            setDidIt(false)
+            setDidIt(true)
+            setWeather(response.data)
+            setAltitude(response.data.elevation)
         } catch (e) {
             console.error("Error fetching data:", e);
         }
@@ -134,28 +139,67 @@ const OptimizationSystem = () => {
             const lastDate = usefulDate
             fetchWeatherData(firstDate, lastDate);
         }
-    },);
+    },)
 
+    const handleInputChange = (e, index, field) => {
 
-
-    const predefinedResponse = {
-        altitude: 300,
-        energy_usage: [200, 15, 110, 105, 102, 100, 982, 916, 4, 3, 22, 10],
-        avg_yearly_increase: -2.5,
-        projected_energy_usage: 88,
-        biodiversity_recommendations: [
-            "Preserve habitats for the following species:",
-            "- Oak Tree",
-            "- Honey Bee",
-            "- Monarch Butterfly",
-            "Plant native vegetation to support these species.",
-            "Avoid harmful chemicals that disrupt ecosystems.",
-        ],
+        if (field) {
+            const updatedDevices = [...inputs.devices];
+            updatedDevices[index][field] = e.target.value;
+            setInputs((prev) => ({ ...prev, devices: updatedDevices }));
+        } else {
+            const { name, value } = e.target;
+            setInputs((prev) => ({ ...prev, [name]: value }));
+        }
+        console.log(inputs)
     };
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setInputs((prev) => ({ ...prev, [name]: value }));
+    const createMoreDeviceAdder = () => {
+        setInputs((prev) => ({
+            ...prev,
+            devices: [...prev.devices, { name: "", watt: 0, hours: 0 }],
+        }));
+    };
+
+    const removeDevice = (index) => {
+        setInputs((prev) => ({
+            ...prev,
+            devices: prev.devices.filter((_, i) => i !== index),
+        }));
+    };
+
+    const DeviceAdder = ({ device, index }) => {
+        return (
+            <div className="device-adder">
+                <label>
+                    Cihaz Adı
+                    <input
+                        type="text"
+                        defaultValue={device.name}
+                        onBlur={(e) => handleInputChange(e, index, "name")}
+                    />
+                </label>
+                <label>
+                    Saatlik Watt
+                    <input
+                        type="number"
+                        defaultValue={device.watt}
+                        onBlur={(e) => handleInputChange(e, index, "watt")}
+                    />
+                </label>
+                <label>
+                    Günlük Kullanım
+                    <input
+                        type="number"
+                        defaultValue={device.hours}
+                        onBlur={(e) => handleInputChange(e, index, "hours")}
+                    />
+                </label>
+                <button type="button" onClick={() => removeDevice(index)}>
+                    Sil
+                </button>
+            </div>
+        );
     };
 
     const handleSubmit = (e) => {
@@ -165,9 +209,17 @@ const OptimizationSystem = () => {
         setError(null);
         console.log(startDate)
         console.log(usefulDate)
+        console.log("fetching data bio")
+        fetchBiodiversityData(location.latitude, location.longitude)
+        let electricity = calculateElectricity(weather, inputs.devices, inputs.area)
         try {
             setTimeout(() => {
-                setResponse(predefinedResponse);
+                setResponse({
+                    altitude: altitude,
+                    energy_usage: electricity,
+                    avg_yearly_increase: -2.5,
+                    projected_energy_usage: 88,
+                });
                 setLoading(false);
             }, 1000);
         } catch (err) {
@@ -181,7 +233,7 @@ const OptimizationSystem = () => {
         return {
             labels: Array.from(
                 { length: response.energy_usage.length },
-                (_, i) => `Month ${i + 1}`
+                (_, i) => `Day ${i + 1}`
             ),
             datasets: [
                 {
@@ -194,12 +246,119 @@ const OptimizationSystem = () => {
             ],
         };
     };
+    function estimateNext10Years(temperatureData, elevation) {
+        const currentYear = new Date().getFullYear();
+        const startYear = currentYear - 30;
+        const endYear = currentYear;
 
-    const generateBiodiversityChartData = () => {
-        if (!animalData || animalData.length === 0) return {};
+        if (!Array.isArray(temperatureData) || temperatureData.length === 0) {
+            throw new Error("Invalid temperature data provided.");
+        }
+
+        if (isNaN(elevation)) {
+            throw new Error("Invalid elevation provided.");
+        }
+
+        const totalDays = temperatureData.length;
+        const totalYears = endYear - startYear + 1;
+        const daysInYear = Math.floor(totalDays / totalYears);
+
+        if (totalDays % totalYears !== 0) {
+            console.warn(
+                "Data might be incomplete or irregular for yearly division. Proceeding with approximate calculations."
+            );
+        }
+        const yearlyAverages = [];
+        for (let i = 0; i < totalYears; i++) {
+            const startIndex = i * daysInYear;
+            const yearData = temperatureData.slice(startIndex, startIndex + daysInYear);
+            const yearlyAverage =
+                yearData.reduce((sum, temp) => sum + temp, 0) / yearData.length;
+            yearlyAverages.push(yearlyAverage);
+        }
+
+        console.log("Yearly Averages:", yearlyAverages);
+
+        const n = yearlyAverages.length;
+        const x = Array.from({ length: n }, (_, i) => i + startYear);
+        const y = yearlyAverages;
+
+        const xMean = x.reduce((sum, xi) => sum + xi, 0) / n;
+        const yMean = y.reduce((sum, yi) => sum + yi, 0) / n;
+
+        let num = 0,
+            den = 0;
+        for (let i = 0; i < n; i++) {
+            num += (x[i] - xMean) * (y[i] - yMean);
+            den += (x[i] - xMean) ** 2;
+        }
+
+        const slope = num / den;
+        const intercept = yMean - slope * xMean;
+
+        console.log("Linear Regression Model: y = " + slope + "x + " + intercept);
+
+        const lapseRate = -6.5 / 1000;
+        const elevationAdjustment = lapseRate;
+
+        console.log("Elevation Adjustment:", elevationAdjustment);
+
+        const next10Years = [];
+        for (let i = endYear + 1; i <= endYear + 10; i++) {
+            const predictedTemp = slope * i + intercept + elevationAdjustment;
+            next10Years.push(predictedTemp);
+        }
+
+        console.log("Next 10 Years' Estimated Temperatures:", next10Years);
+        return next10Years;
+    }
+
+    const generateProjectedYearsChart = () => {
+        if (
+            !Array.isArray(weather.daily.temperature_2m_mean) ||
+            weather.daily.temperature_2m_mean.length === 0
+        ) {
+            console.error("Invalid weather data:", weather.daily.temperature_2m_mean);
+            return {};
+        }
+
+        if (isNaN(altitude)) {
+            console.error("Invalid altitude:", altitude);
+            return {};
+        }
+
+        function generateNext10Years() {
+            const time = new Date();
+            const year = time.getFullYear();
+            const dateArray = [];
+            for (let i = 1; i <= 10; i++) {
+                dateArray.push(year + i);
+            }
+            return dateArray;
+        }
 
         return {
-            labels: animalData.map((animal) => animal.commonName || animal.species || "Unknown"),
+            labels: generateNext10Years(),
+            datasets: [
+                {
+                    label: "Projected Temperature",
+                    data: estimateNext10Years(weather.daily.temperature_2m_mean, altitude),
+                    backgroundColor: "rgba(75,192,192,0.6)",
+                    borderColor: "rgba(75,192,192,1)",
+                    borderWidth: 1,
+                }
+            ]
+        };
+    };
+
+    const generateBiodiversityChartData = () => {
+        console.log(animalData)
+        if (!Array.isArray(animalData) || animalData.length === 0) {
+            console.error("animalData is invalid:", animalData);
+            return {};
+        }
+        return {
+            labels: animalData.map((animal) => (animal.commonName === "Unknown" ? animal.species : animal.commonName) || animal.species || "Unknown"),
             datasets: [
                 {
                     label: "Occurrences",
@@ -211,7 +370,6 @@ const OptimizationSystem = () => {
             ],
         };
     };
-
 
     const fetchBiodiversityData = async (latitude, longitude, radius = 75) => {
         try {
@@ -254,52 +412,63 @@ const OptimizationSystem = () => {
 
             const speciesDetails = await Promise.all(speciesDetailsPromises);
             setAnimalData(speciesDetails);
+            console.log(speciesDetails)
         } catch (error) {
             console.error("Error fetching biodiversity data:", error);
             setError("Failed to fetch biodiversity data.");
         }
     };
-    /*useEffect(() => {
-        console.log("fetching animal data")
-        fetchBiodiversityData(location.latitude, location.longitude);
-    });*/
 
-    const fetchAltitude = async (latitude, longitude) => {
-        try {
-            const response = await axios.get("https://api.opentopodata.org/v1/srtm90m", {
-                params: { locations: `${latitude},${longitude}` },
-            });
 
-            if (response.data.results && response.data.results.length > 0) {
-                setAltitude(response.data.results[0].elevation);
-            } else {
-                console.error("No elevation data found.");
-                setAltitude("No data");
-            }
-        } catch (error) {
-            console.error("Error fetching altitude:", error);
-            setAltitude("Error fetching data");
-        }
-    };
-
-    useEffect(() => {
-        fetchAltitude(location.latitude, location.longitude)
-    })
 
     function calculateElectricity(weatherData, devices, area) {
-        const baseEnergy = area * 0.1
-        const hvacPowerPerM2 = 0.05
-        let deviceEnergy = devices.reduce((sum, device) => {
-            return sum + (device.power / 1000) * device.hours;
+        if (isNaN(area) || area <= 0) {
+            console.error("Invalid area:", area);
+            return [];
+        }
+
+        const baseEnergy = area * 0.1;
+        const hvacPowerPerM2 = 0.05;
+
+        const deviceEnergy = devices.reduce((sum, device, index) => {
+            const watt = parseFloat(device.watt < 0 ? 0 : device.watt);
+            const hours = parseFloat(device.hours < 0 || device.hours > 24 ? 0 : device.hours);
+
+            if (isNaN(watt) || isNaN(hours)) {
+                console.warn(`Invalid device data at index ${index}:`, device);
+                return sum;
+            }
+
+            return sum + (watt / 1000) * hours;
         }, 0);
-        const energyUsage = weatherData.map((entry) => {
+
+        console.log("Device Energy:", deviceEnergy);
+
+        const reversedTemperatures = [...(weatherData.daily?.temperature_2m_mean || [])].reverse();
+
+        const daysIn10Months = 10 * 30;
+
+        const last10MonthsTemperatures = reversedTemperatures.slice(0, daysIn10Months);
+
+        const validTemperatures = last10MonthsTemperatures.filter((temp) => !isNaN(temp));
+
+        if (validTemperatures.length === 0) {
+            console.warn("No valid temperature data for the last 10 months.");
+            return [];
+        }
+
+        const energyUsage = validTemperatures.map((entry) => {
+            const tempDifference = Math.abs(20 - entry);
+
             return (
                 baseEnergy +
-                hvacPowerPerM2 * area * Math.abs(20 - entry.avgTemperature) / 24 +
+                hvacPowerPerM2 * area * tempDifference / 24 +
                 deviceEnergy
             );
         });
-        return energyUsage
+
+        console.log("Energy Usage for Last 10 Months:", energyUsage);
+        return energyUsage;
     }
 
     return (
@@ -308,6 +477,19 @@ const OptimizationSystem = () => {
             <h1>Optimization System</h1>
             <form onSubmit={handleSubmit}>
                 <br />
+                <br />
+                <button type="button" onClick={createMoreDeviceAdder}>
+                    Add Device
+                </button>
+                <div id="deviceAdderContainer">
+                    {inputs.devices.map((device, index) => (
+                        <DeviceAdder
+                            key={index}
+                            device={device}
+                            index={index}
+                        />
+                    ))}
+                </div>
                 <br />
                 <label>
                     Floor:
@@ -323,54 +505,35 @@ const OptimizationSystem = () => {
                     Context Size (m²):
                     <input
                         type="number"
-                        name="context_size"
-                        value={inputs.context_size}
+                        name="area"
+                        value={inputs.area}
                         onChange={handleInputChange}
                     />
                 </label>
                 <br />
-                <label>
-                    Years (comma-separated):
-                    <input
-                        type="text"
-                        name="years"
-                        value={inputs.years}
-                        onChange={handleInputChange}
-                    />
-                </label>
                 <br />
                 <button type="submit" disabled={loading}>
                     {loading ? "Processing..." : "Submit"}
                 </button>
             </form>
-            {altitude}
             {error && <p style={{ color: "red" }}>{error}</p>}
 
             {response && (
                 <div>
                     <h2>Results</h2>
-                    <p>Context: {response.context_type}</p>
                     <p>Altitude: {response.altitude} meters</p>
 
-                    <h3>Energy Usage Trends</h3>
-                    <Line data={generateEnergyUsageChartData()} />
+                    {response && response.energy_usage && (
+                        <Line data={generateEnergyUsageChartData()} />
+                    )}
 
-                    <h3>Biodiversity Recommendations</h3>
-                    <Bar data={generateBiodiversityChartData()} />
-                    <ul>
-                        {response.biodiversity_recommendations.map((rec, index) => (
-                            <li key={index}>{rec}</li>
-                        ))}
-                    </ul>
+                    {animalData && animalData.length > 0 && (
+                        <Bar data={generateBiodiversityChartData()} />
+                    )}
 
-                    <h3>Energy Usage Analysis</h3>
-                    <p>
-                        Average Yearly Increase:{" "}
-                        {response.avg_yearly_increase.toFixed(2)} kWh
-                    </p>
                     <p>
                         Projected Yearly Usage:{" "}
-                        {response.projected_energy_usage.toFixed(2)} kWh
+                        <Bar data={generateProjectedYearsChart()}></Bar>
                     </p>
                 </div>
             )}
