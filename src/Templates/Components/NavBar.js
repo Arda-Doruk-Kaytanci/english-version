@@ -8,6 +8,8 @@ import SaveUs from "../SaveUs";
 import Resources from "../Resources";
 import Contributers from "../Contributers";
 import Optimize from "../OptimizeYourEnvironment";
+import Article2 from "../Article2";
+import Article3 from "../Article3";
 const NavBar = forwardRef((props, ref) => {
     const currLoc = useLocation()
     const isHere = (loc) => {
@@ -27,7 +29,7 @@ const NavBar = forwardRef((props, ref) => {
                     <Link className="nav-bar-link" to="/" style={{ color: isHere('/') ? "#34623F" : "#A1BA89" }}>Ana Sayfa</Link>
                     <Link className="nav-bar-link" to="/save-us" style={{ color: isHere('/save-us') ? "#34623F" : "#A1BA89" }}>Kurtar Bizi</Link>
                     <Link className="nav-bar-link" to="/resources" style={{ color: isHere('/resources') ? "#34623F" : "#A1BA89" }}>Kaynakça</Link>
-                    <Link className="nav-bar-link" to="/optimize" style={{ color: isHere('/optimize') ? "#34623F" : "#A1BA89" }}>Optimize Et</Link>
+                    <Link className="nav-bar-link" to="/get-educated" style={{ color: isHere('/get-educated') ? "#34623F" : "#A1BA89" }}>Bilinçlen</Link>
                     <Link className="nav-bar-link" to="/contributers" style={{ color: isHere('/contributers') ? "#34623F" : "#A1BA89" }}>Yapanlar</Link>
                 </nav>
             </div>
@@ -36,8 +38,10 @@ const NavBar = forwardRef((props, ref) => {
                 <Route path="/" element={<HomePage />}></Route>
                 <Route path="/save-us" element={<SaveUs />}></Route>
                 <Route path="/articles/article-1" element={<Article1 />}></Route>
+                <Route path="/articles/article-2" element={<Article2 />}></Route>
+                <Route path="/articles/article-3" element={<Article3 />}></Route>
                 <Route path="/resources" element={<Resources />}></Route>
-                <Route path="/optimize" element={<Optimize/>}></Route>
+                <Route path="/get-educated" element={<Optimize />}></Route>
                 <Route path="/contributers" element={<Contributers />}></Route>
             </Routes>
         </>

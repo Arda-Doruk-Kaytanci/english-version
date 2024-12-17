@@ -1,7 +1,6 @@
 .footer-custom-shape.arda {
-    display: inline-block;
     width: 50vw;
-    height: 42vh;
+    height: 35vh;
     margin: 0;
     clip-path: ellipse(85% 100% at 25% 0);
     background: linear-gradient(135deg, #A5CC6B, #7FAF50);
@@ -10,17 +9,15 @@
 
 .footer-custom-shape-container {
     display: flex;
-
+    align-items: end;
 }
 
 .footer-custom-shape.doruk {
-    position: relative;
-    bottom: -10.7vw;
     border: none;
-    display: inline-flex;
+    display: flex;
     justify-content: space-evenly;
-    width: 49vw;
-    height: 19.7vh;
+    width: 50vw;
+    height: 16.5vh;
     align-items: center;
     margin: 0;
     color: #3A2D32;

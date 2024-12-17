@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "../Css Files/HomePage.css";
 import ArticleWidget from "./Components/ArticleWidget";
 import article1Img from "../Images/article1showcaseimage.png";
+import article2Img from "../Images/article2.png"
+import article3Img from "../Images/article3.png"
 import img3 from "../Images/forest3.png";
 import img4 from "../Images/deso5.png";
 import img5 from "../Images/deso2.png";
@@ -84,8 +86,8 @@ function HomePage() {
             <Flashbang />
             <section className="article-widget-container">
                 <ArticleWidget link="/articles/article-1" name="Gösterge Türlerin Ekosistemdeki Rolü dair görsel" img={article1Img} figcaption="Gösterge Türlerin Ekosistemdeki Rolü" />
-                <ArticleWidget link="/articles/article-1" name="Gösterge Türlerin Ekosistemdeki Rolü dair görsel" img={article1Img} figcaption="Gösterge Türlerin Ekosistemdeki Rolü" />
-                <ArticleWidget  link="/articles/article-1" name="Gösterge Türlerin Ekosistemdeki Rolü dair görsel" img={article1Img} figcaption="Gösterge Türlerin Ekosistemdeki Rolü" />
+                <ArticleWidget link="/articles/article-2" name="Pc-Ord ile ilgili görsel" img={article2Img} figcaption="Pc-Ord Uygulaması" />
+                <ArticleWidget link="/articles/article-3" name="Biyoloji ve sürdürebilir bir ekosisteme ait görsel" img={article3Img} figcaption="Biyoloji ile Sürdürebilir Sistem" />
             </section>
 
 

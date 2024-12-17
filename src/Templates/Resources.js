@@ -1,6 +1,13 @@
 import React from "react";
 import "../Css Files/Resources.css"
 import placeHolderImg from "../Images/placeholder.png"
+import axioslogo from "../Images/axios.png"
+import reactlogo from "../Images/react.png"
+import csslogo from "../Images/css.png"
+import jslogo from "../Images/javascript.png"
+import chartjslogo from "../Images/chartjs.png"
+import chatgptlogo from "../Images/chatgpt.png"
+import htmllogo from "../Images/html5.png"
 function Resources() {
     return (
         <div className="resources-page-container">
@@ -18,23 +25,31 @@ function Resources() {
             <section className="used-tools-display">
                 <h1>Kullandığımız Araçlar</h1>
                 <div className="used-tools-container right">
-                    <img src={placeHolderImg} alt="" className="highlight-img"></img >
+                    <img src={htmllogo} alt="" className="highlight-img"></img >
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
                 </div>
                 <div className="used-tools-container left">
-                    <img src={placeHolderImg} alt="" className="highlight-img"></img >
+                    <img src={csslogo} alt="" className="highlight-img"></img >
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
                 </div>
                 <div className="used-tools-container right">
-                    <img src={placeHolderImg} alt="" className="highlight-img"></img >
+                    <img src={jslogo} alt="" className="highlight-img"></img >
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
                 </div>
                 <div className="used-tools-container left">
-                    <img src={placeHolderImg} alt="" className="highlight-img"></img >
+                    <img src={reactlogo} alt="" className="highlight-img"></img >
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
                 </div>
                 <div className="used-tools-container right">
-                    <img src={placeHolderImg} alt="" className="highlight-img"></img >
+                    <img src={axioslogo} alt="" className="highlight-img"></img >
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
+                </div>
+                <div className="used-tools-container left">
+                    <img src={chartjslogo} alt="" className="highlight-img"></img >
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
+                </div>
+                <div className="used-tools-container right">
+                    <img src={chatgptlogo} alt="" className="highlight-img"></img >
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
                 </div>
             </section>
@@ -42,7 +57,7 @@ function Resources() {
             <section className="resources-text-container">
                 <h1>Kaynakça</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget faucibus tortor, at finibus neque. Nullam vel leo rhoncus, sodales elit a, pharetra eros. Pellentesque bibendum accumsan elit, eu eleifend nisi venenatis sit amet. Pellentesque venenatis porttitor dolor ut maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin hendrerit ac neque vehicula consequat. Vivamus dictum in est id aliquet. Quisque molestie mauris nec libero commodo vehicula. Fusce ac blandit quam. Mauris a odio dignissim, egestas risus et, rutrum neque. Nullam rutrum sem quam, eget condimentum elit placerat eu. Duis fringilla sit amet odio vel cursus.
+                    https://byjus.com/biology/nitrogen-cycle/
 
                     Morbi commodo libero in maximus laoreet. Curabitur metus nisl, mattis eu metus quis, elementum dictum diam. Donec suscipit elit vitae tortor fringilla ultricies. Maecenas at nisl ante. Vestibulum laoreet lacus id orci faucibus malesuada. Pellentesque porta rutrum ultricies. Morbi vehicula vestibulum lacus nec eleifend. Aliquam id tortor felis. Suspendisse consectetur elit eget tristique imperdiet. Quisque varius augue at ultricies auctor. Donec rutrum velit vitae felis congue iaculis. Maecenas consequat mauris eu dui pretium, vel euismod erat gravida. Nam ac viverra diam.
 
@@ -104,7 +119,13 @@ function Resources() {
             <section className="links-to-used-tools-container">
                 <h1>Linkler</h1>
                 <ul>
-                    <li>awdwadaw</li>
+                    <li className="anchor-li"><a className="link-anchor" href="https://react.dev">https://react.dev</a></li>
+                    <li className="anchor-li"><a className="link-anchor" href="https://reactrouter.com">https://reactrouter.com</a></li>
+                    <li className="anchor-li"><a className="link-anchor" href="https://www.chartjs.org">https://www.chartjs.org</a></li>
+                    <li className="anchor-li"><a className="link-anchor" href="https://chatgpt.com">https://chatgpt.com</a></li>
+                    <li className="anchor-li"><a className="link-anchor" href="https://unsplash.com">https://unsplash.com</a></li>
+                    <li className="anchor-li"><a className="link-anchor" href="https://axios-http.com">https://axios-http.com</a></li>
+                    <li className="anchor-li"   ><a className="link-anchor" href="https://cssgridgenerator.io">https://cssgridgenerator.io</a></li>
                 </ul>
             </section>
         </div>
