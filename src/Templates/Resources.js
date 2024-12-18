@@ -1,6 +1,5 @@
 import React from "react";
 import "../Css Files/Resources.css"
-import placeHolderImg from "../Images/placeholder.png"
 import axioslogo from "../Images/axios.png"
 import reactlogo from "../Images/react.png"
 import csslogo from "../Images/css.png"
@@ -8,17 +7,22 @@ import jslogo from "../Images/javascript.png"
 import chartjslogo from "../Images/chartjs.png"
 import chatgptlogo from "../Images/chatgpt.png"
 import htmllogo from "../Images/html5.png"
+import image1 from "../Images/image1.png"
+import image2 from "../Images/image2.png"
+import image3 from "../Images/image3.png"
+import image4 from "../Images/image4.png"
+
 function Resources() {
     return (
         <div className="resources-page-container">
             <section className="inspiration">
                 <h1>İlhamımız</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat mi mi, sit amet cursus dolor convallis sed. Integer dignissim aliquet felis. Etiam sit amet rhoncus ante. Aenean molestie ornare rutrum. Pellentesque congue placerat nunc, semper pulvinar enim aliquet eu. Maecenas elementum euismod euismod. Suspendisse hendrerit magna id nulla ornare, vel posuere dui ullamcorper. Nullam at nulla id est tempus vulputate at sit amet purus. Proin ultricies lectus sapien, in suscipit enim eleifend quis. Vivamus est nulla, interdum ut mauris ultrices, ornare porttitor sem.
+                    Bu projeye başlarken ilhamımızı, ekolojik analizlerde kullanılan PC-ORD yazılımının varlığını keşfederek aldık. PC-ORD’un sunduğu sistematik yaklaşım ve ekolojik verilerin analizine dair sağladığı perspektif, bize doğayı daha iyi anlamak ve teknolojik sistemlerle entegre çözümler üretme fikrini aşıladı.
 
-                    Aliquam dictum condimentum porttitor. Phasellus bibendum augue nec vehicula mattis. Nulla vulputate a odio vitae dapibus. Nam non diam pellentesque, bibendum odio sit amet, malesuada nisi. Donec id ornare eros, eget faucibus enim. Maecenas facilisis lacus vitae velit pretium, sed congue risus rhoncus. Aenean mollis libero felis, nec efficitur tortor euismod ut. Aenean aliquam sollicitudin tempor. Cras ultricies enim et ipsum hendrerit, eget commodo ex suscipit. Nulla quis eleifend metus. Sed id nunc et tellus iaculis sodales. Aenean et tempus ex.
+                    Amacımız, ekosistem dinamiklerini anlamak ve bu dinamikleri optimize ederek sürdürülebilir sistemler geliştirmekti. Bu doğrultuda, doğanın sunduğu verileri kullanarak enerji üretimi, atık yönetimi ve kaynak döngülerini analiz etmeye odaklandık. Projemizin sonuna yaklaştığımız şu günlerde, hedefimize adım adım ilerlemenin mutluluğunu yaşıyoruz.
 
-                    Fusce cursus at nulla ac porttitor. Etiam lacinia dui quis lobortis dictum. Nulla ornare mi quis velit venenatis condimentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut at gravida tellus, ut placerat ex. Mauris elit odio, tristique nec sollicitudin sed, vehicula non nibh. Donec vel mauris eu tellus faucibus aliquam. Morbi gravida suscipit augue, consequat egestas justo accumsan ac. Morbi vel velit fermentum, aliquet velit commodo, malesuada erat.
+                    Bu süreçte, doğa ve sistem tasarımı arasındaki uyumun ne kadar önemli olduğunu bir kez daha anladık. PC-ORD kullanmasak da, bize sağladığı ilham sayesinde kendi yöntemlerimizi geliştirdik ve ekolojik sistemlerin sürdürülebilirliğini destekleyecek bir çözüm ortaya koymayı başardık.
                 </p>
             </section>
 
@@ -26,94 +30,141 @@ function Resources() {
                 <h1>Kullandığımız Araçlar</h1>
                 <div className="used-tools-container right">
                     <img src={htmllogo} alt="" className="highlight-img"></img >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
+                    <p>HTML (HyperText Markup Language), web sayfalarının oluşturulması ve düzenlenmesi için kullanılan temel işaretleme dilidir.
+                        1991 yılında Tim Berners-Lee tarafından geliştirilen HTML, internetin temel yapı taşını oluşturur ve bir web tarayıcısının
+                        sayfadaki içeriği nasıl görüntüleyeceğini belirler. HTML, kullanıcıya metin, görsel, bağlantı, video ve ses gibi öğelerin
+                        düzenlenmesini sağlar. Web sitelerinde gördüğümüz her yapı, HTML ile şekillendirilmiş ve düzenlenmiştir. HTML, içerikleri
+                        sınıflandırmak için etiketler kullanır ve bu etiketler genellikle bir açılış ve bir kapanış etiketi olmak üzere çift olarak
+                        kullanılır. HTML bir web sayfasının iskeletini oluşturur. Her HTML belgesi &lt;!DOCTYPE html&gt; deklarasyonu ile başlar ve
+                        ardından gelen &lt;html&gt; etiketi, belgenin tamamını kapsar. Sayfa içeriğini tanımlayan başlıca etiketler &lt;head&gt; ve
+                        &lt;body&gt; etiketleridir. Örneğin, bir başlık eklemek için &lt;h1&gt; etiketi kullanılırken, bir paragraf oluşturmak için
+                        &lt;p&gt; etiketi kullanılır. Bağlantılar &lt;a&gt; etiketi ile eklenir, resimler ise &lt;img&gt; etiketi ile sayfaya dahil edilir.
+                        HTML, çok katmanlı bir yapı oluşturmak için &lt;div&gt; ve &lt;span&gt; gibi blok ve satır içi öğeleri de destekler. Günümüzde
+                        HTML5, HTML'in en güncel sürümüdür ve internet dünyasında büyük bir dönüşüm sağlamıştır. HTML5, ses, video, animasyon ve
+                        kullanıcı etkileşimlerini doğrudan destekleyerek modern web geliştirme süreçlerini hızlandırmıştır. Ek olarak, semantik
+                        etiketlerin (örneğin &lt;section&gt;, &lt;article&gt; ve &lt;footer&gt;) eklenmesi, sayfa yapısını daha anlamlı hale getirmiştir
+                        ve arama motorlarının içerikleri daha kolay anlamasına yardımcı olmuştur. HTML, web geliştirme sürecinde temel yapı taşını
+                        oluşturur ve genellikle CSS (Cascading Style Sheets) ve JavaScript gibi diğer teknolojilerle birlikte kullanılır. CSS, HTML
+                        ile oluşturulan içeriğin görünümünü ve düzenini sağlarken, JavaScript sayfaya dinamiklik ve interaktif özellikler kazandırır.
+                        HTML öğrenmek, web geliştirme yolculuğuna adım atan herkes için zorunlu bir adımdır ve modern teknolojilerle entegre çalışarak
+                        güçlü ve etkileyici web sayfalarının oluşturulmasını sağlar.</p>
                 </div>
                 <div className="used-tools-container left">
                     <img src={csslogo} alt="" className="highlight-img"></img >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
+                    <p>CSS (Cascading Style Sheets), web sayfalarının görünümünü ve düzenini sağlayan bir stil dilidir. 1996 yılında W3C (World Wide Web Consortium) tarafından geliştirilen CSS, HTML ile yapılandırılmış web sayfalarının görsel özelliklerini düzenlemek için kullanılır. CSS sayesinde bir web sayfasındaki metinlerin rengi, boyutu, yazı tipi, arka planı ve sayfadaki öğelerin konumu gibi pek çok özellik kontrol edilebilir. CSS, web geliştirme sürecinde HTML'e görsel bir boyut kazandırarak, kullanıcıların daha estetik ve düzenli bir deneyim yaşamasını sağlar.
+
+                        CSS kullanımı, web sayfalarının daha hızlı yüklenmesine ve düzenli kodlama yapılmasına olanak tanır. HTML, bir sayfanın iskeletini oluştururken, CSS bu iskelete görsel anlamda şekil verir. Örneğin, metinleri renklendirmek, öğeler arasındaki boşlukları ayarlamak, sayfa arka planına renk veya görsel eklemek CSS ile yapılır. Ayrıca CSS, aynı stil tanımlarını birden fazla HTML sayfasında kullanarak tasarımların tutarlı olmasını sağlar.
+
+                        CSS, inline CSS, internal CSS ve external CSS olmak üzere üç farklı yöntemle kullanılır. Inline CSS, HTML etiketlerinin içine doğrudan stil eklemek için kullanılır ancak büyük projelerde kod karmaşasına yol açabilir. Internal CSS, sayfanın &gt;head&gt; bölümünde tanımlanır ve sadece o sayfada geçerlidir. External CSS ise ayrı bir dosyada tanımlanır ve birden fazla HTML sayfasına bağlanarak daha düzenli ve etkili bir stil yönetimi sağlar.
+
+                        CSS, web tasarımında sayfa düzenini oluşturmak ve farklı ekran boyutlarına uygun tasarımlar yapmak için güçlü araçlar sunar. Responsive tasarım, CSS'in en önemli özelliklerinden biridir ve mobil cihazlar, tabletler ve masaüstü bilgisayarlar gibi farklı cihazlara uyum sağlayan sayfalar oluşturmayı sağlar. Bu sayede kullanıcı deneyimi her platformda optimize edilir.
+
+                        CSS'nin gelişimi ile birlikte, modern web tasarımında birçok yeni özellik ve teknik ortaya çıkmıştır. Günümüzde kullanılan CSS3, animasyonlar, geçişler (transitions), gölgeler ve 3D efektler gibi gelişmiş görsel özellikler sunar. CSS, web sayfalarının sadece statik görünmesini önler ve etkileşimli, dinamik bir yapı kazandırır.
+
+                        Sonuç olarak, CSS web sayfalarının estetik ve kullanıcı dostu olmasını sağlayan temel bir teknolojidir. HTML ile birlikte çalışarak web geliştirme dünyasında önemli bir yer tutar ve modern web tasarımının vazgeçilmez bir parçasıdır. CSS öğrenmek, güçlü ve etkileyici web siteleri oluşturmanın anahtarıdır.</p>
                 </div>
                 <div className="used-tools-container right">
                     <img src={jslogo} alt="" className="highlight-img"></img >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
+                    <p>JavaScript, web sayfalarını dinamik ve etkileşimli hale getiren bir programlama dilidir. 1995 yılında Brendan Eich tarafından geliştirilen JavaScript, başlangıçta yalnızca tarayıcılar üzerinde çalışmak için tasarlanmış olsa da günümüzde hem tarayıcı tarafında hem de sunucu tarafında çalışabilen güçlü ve çok yönlü bir dil haline gelmiştir. HTML ve CSS ile birlikte JavaScript, modern web geliştirme süreçlerinin temel taşlarından biridir.
+
+                        JavaScript’in temel amacı, statik web sayfalarına dinamiklik kazandırmaktır. HTML ile yapılandırılan ve CSS ile görsel düzenlemesi yapılan bir web sayfası, JavaScript sayesinde kullanıcı etkileşimine açık ve işlevsel hale gelir. Örneğin, bir butona tıklandığında sayfanın belirli bir kısmının güncellenmesi, bir formun doldurulması sırasında girilen verilerin kontrol edilmesi veya animasyonların oynatılması gibi işlemler JavaScript ile yapılır.
+
+                        JavaScript, tarayıcı tarafında çalışması sayesinde hızlı bir performans sağlar. Kullanıcı tarayıcısı üzerinde çalıştığı için sunucuya sürekli istek göndermeden işlemleri doğrudan gerçekleştirebilir. Bu özellik, kullanıcı deneyimini önemli ölçüde iyileştirir. Günümüzde Node.js gibi teknolojiler sayesinde JavaScript, tarayıcı dışında sunucu tarafında da kullanılmakta ve bu sayede tam kapsamlı uygulamalar geliştirmek mümkün hale gelmiştir.
+
+                        JavaScript, web sayfalarının yapısında bulunan DOM (Document Object Model) üzerinden sayfadaki öğelere erişim sağlar ve bu öğeleri dinamik olarak değiştirebilir. Örneğin, bir metnin içeriğini güncellemek, bir görselin görünürlüğünü değiştirmek veya sayfada yeni HTML öğeleri eklemek gibi işlemler, JavaScript kullanılarak yapılabilir. Bunun yanı sıra JavaScript, internet üzerinden veri alışverişini de mümkün kılar. Modern tarayıcıların sunduğu fetch API veya XMLHttpRequest gibi araçlarla sunucudan veri çekmek ya da sunucuya veri göndermek oldukça kolaydır.
+
+                        JavaScript’in yetenekleri, yalnızca web sayfalarıyla sınırlı kalmaz. Günümüzde oyun geliştirme, grafik işleme ve mobil uygulama geliştirme gibi alanlarda da yaygın olarak kullanılmaktadır. HTML5 ile birlikte gelen Canvas API, tarayıcı üzerinde grafiksel içerikler oluşturmayı mümkün kılar ve bu sayede JavaScript ile basit oyunlar ve animasyonlar geliştirilebilir. Ayrıca, JavaScript tabanlı birçok modern kütüphane ve çerçeve, geliştiricilere daha hızlı ve verimli kod yazma imkanı sunar.
+
+                        Sonuç olarak, JavaScript günümüzde modern web geliştirme süreçlerinin en önemli bileşenlerinden biridir. Web sitelerini sadece görüntülenebilir içerikler olmaktan çıkarıp dinamik, etkileşimli ve kullanıcı dostu uygulamalar haline getirir. Tarayıcı tarafında çalışmasının yanı sıra sunucu tarafında da kullanılabilir olması, JavaScript’i hem frontend hem de backend geliştirme için vazgeçilmez bir araç haline getirmiştir.</p>
                 </div>
                 <div className="used-tools-container left">
                     <img src={reactlogo} alt="" className="highlight-img"></img >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
+                    <p>React, kullanıcı arayüzleri oluşturmak için geliştirilmiş açık kaynaklı bir JavaScript kütüphanesidir. 2013 yılında Facebook tarafından geliştirilen React, özellikle tek sayfa uygulamaları (Single Page Applications - SPA) geliştirme amacıyla kullanılmaktadır. React, geleneksel web geliştirme yöntemlerine kıyasla daha hızlı ve daha etkili çözümler sunarak geliştiricilerin modern, dinamik ve performanslı uygulamalar geliştirmesine olanak tanır.
+
+                        React’in temelinde bileşen tabanlı mimari yer alır. Bir web sayfasını küçük, bağımsız ve yeniden kullanılabilir bileşenlere bölerek yönetimi kolaylaştırır. Her bir bileşen, kendi HTML yapısını, CSS stilini ve JavaScript işlevselliğini içerebilir. Örneğin, bir buton, bir başlık veya bir form, ayrı bir React bileşeni olarak tanımlanabilir ve farklı sayfalarda tekrar tekrar kullanılabilir. Bu sayede uygulamanın kod yapısı modüler ve daha okunabilir hale gelir.
+
+                        React’in sunduğu en önemli özelliklerden biri de Virtual DOM yapısıdır. Virtual DOM, tarayıcının geleneksel DOM yapısını sanal bir kopya üzerinde tutarak değişiklikleri hızlı bir şekilde algılar ve yalnızca gerekli bölümleri günceller. Bu süreç sayesinde sayfanın tamamı yeniden yüklenmez, yalnızca değişen bileşenler güncellenir ve performans büyük ölçüde artar.
+
+                        React, sadece kullanıcı arayüzlerini oluşturmakla kalmaz, aynı zamanda verilerin kullanıcı arayüzünde dinamik olarak nasıl güncelleneceğini de kolaylaştırır. State ve props adı verilen yapılar, bileşenler arasında veri akışını sağlar. State, bir bileşenin içindeki veriyi tutarken, props ise bir bileşenden diğerine veri aktarmak için kullanılır. Bu yapı sayesinde veri yönetimi esnek ve düzenli bir şekilde sağlanır.
+
+                        React’in modern web geliştirmedeki popülerliği, onun ekosistemindeki güçlü araçlardan da kaynaklanmaktadır. React Router, sayfalar arasında gezinmeyi sağlayarak SPA mantığını destekler. Redux ve Context API gibi araçlar, uygulamalardaki global state yönetimini kolaylaştırır. Ayrıca, Hooks yapısı ile bileşenlerin işlevselliği artırılmıştır ve React geliştiricilere sınıf tabanlı bileşenler yerine daha sade ve okunabilir fonksiyon tabanlı bileşenler yazma imkanı sunmuştur.
+
+                        React’in geliştiricilere sunduğu esneklik, yalnızca tarayıcı üzerinde çalışan uygulamalarla sınırlı değildir. React Native sayesinde aynı JavaScript kod tabanı kullanılarak iOS ve Android platformları için mobil uygulamalar geliştirilebilir. Bu durum, geliştiricilere hem zaman hem de maliyet açısından büyük avantaj sağlar.
+
+                        Sonuç olarak, React, modern web geliştirme dünyasında kullanıcı arayüzlerini hızlı, modüler ve performanslı bir şekilde oluşturmak için vazgeçilmez bir araçtır. Bileşen tabanlı yapısı, Virtual DOM performansı ve zengin ekosistemi ile geliştiricilere güçlü ve esnek çözümler sunar. React, günümüzde dünya çapında büyük şirketler tarafından kullanılmakta ve popülaritesini her geçen gün artırmaktadır. Web ve mobil uygulama geliştirme süreçlerini birleştiren bu güçlü kütüphane, geliştiriciler için öğrenmesi kolay ve kullanımı keyifli bir teknoloji haline gelmiştir.</p>
                 </div>
                 <div className="used-tools-container right">
                     <img src={axioslogo} alt="" className="highlight-img"></img >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
+                    <p>Axios, web uygulamalarında HTTP isteklerini gerçekleştirmek için kullanılan popüler bir JavaScript kütüphanesidir. Tarayıcı tarafında çalışmanın yanı sıra, Node.js ile sunucu tarafında da kullanılabilir. Axios, özellikle RESTful API’ler ile iletişim kurmak, veri alışverişi yapmak ve uygulamalar içinde dinamik içerik sağlamak için geliştirilmiştir.
+
+                        Axios, JavaScript’in yerleşik fetch() API’sine kıyasla daha fazla kolaylık ve özellik sunar. Örneğin, isteklere otomatik olarak başlık (header) eklemek, hata yönetimini daha kolay hale getirmek, veri formatlarını otomatik dönüştürmek gibi ek işlevler sağlar. Bu özellikler, geliştiricilere daha az kod yazarak daha düzenli ve okunabilir bir yapı oluşturma avantajı sunar.
+
+                        Axios, asenkron çalışır ve böylece web sayfalarının daha hızlı ve akıcı bir kullanıcı deneyimi sunmasını sağlar. Kullanıcı, sayfanın geri kalan bölümlerini kullanmaya devam ederken Axios, arka planda veriyi çekebilir veya sunucuya veri gönderebilir. Bu süreçte veriler JSON formatında işlenir, bu da modern web geliştirme süreçlerinde oldukça yaygın bir standarttır.
+
+                        Axios’un temel özellikleri şunlardır:
+                        Axios, HTTP isteklerinin oluşturulmasını, yönetilmesini ve sonuçların işlenmesini kolaylaştıran bir kütüphanedir. Tarayıcı tarafında çalışmasının yanı sıra sunucu tarafında da Node.js ile sorunsuz bir şekilde kullanılabilir. Web geliştiricileri için hem performanslı hem de kullanımı kolay bir araç sunan Axios, RESTful API’ler ile çalışmayı oldukça basit hale getirir.
+
+                        Axios ile GET, POST, PUT ve DELETE gibi HTTP metotlarını kullanarak sunucuya istek gönderilebilir. Bir uygulamada kullanıcı verilerini çekmek için GET isteği yapılabilirken, yeni bir veriyi sunucuya kaydetmek için POST isteği kullanılır. Axios, bu işlemleri basitleştirir ve kodun okunabilirliğini artırır. Ayrıca isteklere header bilgileri eklemek, timeout süreleri belirlemek ve verileri otomatik olarak dönüştürmek gibi önemli özelliklere sahiptir.
+
+                        Axios’un en büyük avantajlarından biri de hata yönetimi konusunda sunduğu kolaylıktır. Sunucudan dönen hatalı yanıtlar otomatik olarak yakalanır ve geliştiriciye daha anlamlı hata mesajları sağlar. Örneğin, bir isteğin zaman aşımına uğraması veya sunucudan 404 gibi bir hata kodunun dönmesi durumunda Axios, bu hatayı otomatik olarak işleyip geliştiriciye bilgi sağlar.
+
+                        Ayrıca Axios, interceptor adı verilen yapı ile istekler ve yanıtlar üzerinde işlem yapma imkanı tanır. Bu özellik, tüm isteklerde kullanılacak bir yapı eklemek (örneğin yetkilendirme token’ı) veya gelen yanıtları toplu halde düzenlemek gibi işlemler için oldukça faydalıdır.
+
+                        Axios’un modern JavaScript kütüphaneleriyle uyumluluğu da oldukça güçlüdür. Özellikle React, Vue.js ve Angular gibi popüler kütüphaneler ile birlikte kullanılır. React uygulamalarında, Axios ile API istekleri yaparak state (durum) güncellemeleri sağlanır ve kullanıcıya anlık olarak veri sunulur.
+
+                        Sonuç olarak, Axios, HTTP istekleri için basit, güçlü ve esnek bir çözüm sunar. Veri alışverişi süreçlerini hızlandırır ve modern web geliştirme projelerinde sıklıkla tercih edilir. Hata yönetimi, otomatik veri dönüştürme ve geniş yapılandırma seçenekleri sayesinde, API bağlantılarını yönetmek ve verileri işlemek için en uygun araçlardan biridir. Hem frontend hem de backend geliştiriciler için öğrenmesi kolay ve kullanımı etkili bir araçtır.</p>
                 </div>
                 <div className="used-tools-container left">
                     <img src={chartjslogo} alt="" className="highlight-img"></img >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
+                    <p>Chart.js, veri görselleştirme amacıyla kullanılan açık kaynaklı bir JavaScript kütüphanesidir. HTML5’in Canvas API'sini kullanarak çalışır ve web uygulamalarında dinamik, etkileşimli grafikler oluşturmayı sağlar. Grafikler, verilerin daha kolay anlaşılmasını sağlarken kullanıcıların görsel olarak daha etkili bir deneyim yaşamasına olanak tanır. Chart.js, basit yapısı ve kullanımı kolay arayüzü sayesinde, web geliştiricileri için popüler bir tercih haline gelmiştir.
+
+                        Chart.js, çeşitli grafik türlerini destekler ve bu grafikler uygulamanın ihtiyacına göre özelleştirilebilir. Kullanıcılar zaman içindeki değişimleri göstermek için çizgi grafikleri, karşılaştırmalı veriler için çubuk grafikleri, oranları analiz etmek için pasta ve halka grafikleri gibi görselleştirme araçlarını kullanabilir. Ayrıca radar grafikleri, karma grafikler ve dağılım grafikleri gibi daha karmaşık veri görselleştirme yöntemlerini de destekler. Bu çeşitlilik, Chart.js’i hem basit projeler hem de kapsamlı analiz uygulamaları için uygun bir hale getirir.
+
+                        Chart.js, modern web geliştirme teknolojileriyle sorunsuz bir şekilde çalışır. Grafikler, veri girişlerine göre dinamik olarak güncellenebilir ve kullanıcı etkileşimlerine yanıt verebilir. Örneğin, bir veritabanından çekilen verilerle anlık grafik güncellemeleri yapılabilir veya kullanıcının bir butona tıklamasıyla farklı veri kümeleri görselleştirilebilir. Grafikler tarayıcı üzerinde hızlı bir şekilde render edilerek performans kaybını en aza indirir.
+
+                        Kütüphane, geliştiricilere geniş özelleştirme seçenekleri sunar. Grafiklerin boyutları, renkleri, kenarlıkları, yazı tipleri ve etkileşim özellikleri kolaylıkla düzenlenebilir. Ayrıca, eksen değerleri, başlıklar ve açıklama kutuları gibi detaylar eklenerek grafiklerin daha anlamlı hale getirilmesi sağlanır. Chart.js, esnek yapılandırma seçenekleri sayesinde projeye özel ihtiyaçlara cevap verir ve geliştiricilerin verilerini en uygun şekilde görselleştirmesine yardımcı olur.
+
+                        Chart.js, özellikle React, Vue.js ve Angular gibi modern JavaScript kütüphaneleri ve çerçeveleriyle kolayca entegre edilebilir. Bu sayede, tek sayfa uygulamaları (SPA) ve dashboard projelerinde veri görselleştirme süreçleri büyük ölçüde hızlanır. Web geliştirme projelerinde kullanımı kolay olması, dokümantasyonunun güçlü olması ve topluluk desteğinin genişliği, Chart.js’in tercih edilmesini sağlayan önemli faktörlerdir.
+
+                        Sonuç olarak, Chart.js, veri görselleştirme ihtiyacı olan her projede güvenle kullanılabilecek güçlü ve esnek bir kütüphanedir. Geliştiricilere verilerini etkili, anlaşılır ve estetik bir şekilde sunma imkanı tanır. Özelleştirilebilir yapısı, performans avantajı ve geniş grafik türleri sayesinde, hem küçük çaplı web projelerinde hem de büyük ölçekli analiz uygulamalarında önemli bir rol oynar.</p>
                 </div>
                 <div className="used-tools-container right">
                     <img src={chatgptlogo} alt="" className="highlight-img"></img >
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum nisi non lobortis elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam libero mauris, eleifend ut est ac, malesuada ornare eros. Sed vitae elit id lectus faucibus lobortis. Aenean suscipit faucibus libero at finibus. Nullam ac tortor eget urna euismod viverra ac sit amet ex. Nulla facilisi. Donec tristique lorem eu dolor congue condimentum. Nam fermentum tristique justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dolor dui, faucibus non neque in, tempus accumsan ipsum. Sed sit amet felis id tellus commodo efficitur vel ac dui. In sit amet quam vitae diam mollis sagittis sed nec quam. Proin nec purus et nisi tempor consequat. Duis vel mattis nisl.</p>
+                    <p>ChatGPT, OpenAI tarafından geliştirilen yapay zeka tabanlı bir dil modelidir ve GPT (Generative Pre-trained Transformer) mimarisine dayanır. Gelişmiş doğal dil işleme (NLP) teknikleri kullanan ChatGPT, metin tabanlı girdilere anlamlı, tutarlı ve doğal yanıtlar üretebilir. Kullanıcıların sorularını yanıtlayabilir, metinler oluşturabilir, çeviriler yapabilir ve hatta karmaşık konularda açıklamalar sunabilir.
+
+                        ChatGPT’nin temelinde, büyük miktarda metin verisi üzerinde eğitilmiş derin öğrenme modelleri yer alır. Bu modeller, insan dilinin yapısını ve mantığını anlamak için devasa veri kümelerinden öğrenir. ChatGPT, cümleler arasındaki ilişkileri analiz ederek tutarlı ve akıcı metinler üretir. GPT-4 gibi son sürümler, önceki nesillerden daha güçlüdür ve daha karmaşık bağlamları anlayarak daha doğru yanıtlar verebilir.
+
+                        ChatGPT, geniş bir kullanım alanına sahiptir. Eğitimden yazılım geliştirmeye, içerik üretiminden müşteri hizmetlerine kadar birçok alanda kullanıcıların hayatını kolaylaştırır. Özellikle, programlama alanında geliştiricilere kod yazma, hata ayıklama ve algoritma tasarlama gibi konularda büyük yardımcıdır. Örneğin, bir geliştirici ChatGPT’ye bir sorun tanımı verir ve model bu sorunun çözümü için örnek kodlar sunabilir.
+
+                        Bunun dışında, ChatGPT’nin sağladığı faydalardan biri de içerik üretiminde kullanılmasıdır. Blog yazıları, makaleler, hikayeler ve sosyal medya gönderileri gibi metinler kısa sürede üretilebilir. Ayrıca dil öğrenen kişiler için çeviri yapma, dilbilgisi hatalarını düzeltme ve cümle yapısını iyileştirme gibi alanlarda da etkili bir araçtır.
+
+                        ChatGPT’nin bir diğer önemli yeteneği, sohbet tabanlı uygulamalarda kullanılmasıdır. Chatbotlar aracılığıyla müşteri destek hizmetlerinde kullanılarak kullanıcıların sorularına anında yanıt verilebilir ve insan gücüne olan ihtiyacı azaltabilir. Özellikle, e-ticaret, bankacılık ve teknoloji sektörlerinde ChatGPT gibi modeller müşteri memnuniyetini artırmaya yönelik büyük avantajlar sağlar.
+
+                        Gelişmiş bir yapay zeka modeli olan ChatGPT, yaratıcı düşünceyi destekleyerek beyin fırtınası yapma, yeni fikirler üretme ve karmaşık problemlere çözüm arama süreçlerinde de kullanılabilir. Araştırmacılar, mühendisler ve öğrenciler, projelerinde karşılaştıkları zorlukları ChatGPT’nin sunduğu önerilerle aşabilirler. Ayrıca yapay zeka teknolojilerinin ilerlemesiyle birlikte ChatGPT, daha güvenilir ve verimli sonuçlar üretir.
+
+                        Sonuç olarak, ChatGPT, insan dilini anlayarak ve yorumlayarak kullanıcılara etkili ve hızlı çözümler sunan çok yönlü bir yapay zeka aracıdır. Bilgiye hızlı erişim, verimlilik artışı ve yaratıcı üretim süreçlerini destekleyerek eğitimden iş dünyasına kadar birçok alanda önemli bir rol oynar. Gelişmiş dil modeli yetenekleriyle gelecekte daha fazla alanda kullanılmaya devam edecek ve dijital dönüşümün önemli bir parçası olmaya devam edecektir.</p>
                 </div>
             </section>
 
-            <section className="resources-text-container">
-                <h1>Kaynakça</h1>
-                <p>
-                    https://byjus.com/biology/nitrogen-cycle/
-
-                    Morbi commodo libero in maximus laoreet. Curabitur metus nisl, mattis eu metus quis, elementum dictum diam. Donec suscipit elit vitae tortor fringilla ultricies. Maecenas at nisl ante. Vestibulum laoreet lacus id orci faucibus malesuada. Pellentesque porta rutrum ultricies. Morbi vehicula vestibulum lacus nec eleifend. Aliquam id tortor felis. Suspendisse consectetur elit eget tristique imperdiet. Quisque varius augue at ultricies auctor. Donec rutrum velit vitae felis congue iaculis. Maecenas consequat mauris eu dui pretium, vel euismod erat gravida. Nam ac viverra diam.
-
-                    Morbi cursus aliquet nulla in elementum. Sed vel arcu ligula. Aenean ullamcorper lorem est, eu pulvinar orci porttitor id. Proin varius felis sit amet scelerisque suscipit. Phasellus elementum, sem et ornare scelerisque, velit nulla pretium metus, eu suscipit magna nulla vel dui. Praesent magna nisi, dapibus id mattis non, venenatis quis magna. Sed laoreet dolor et mattis placerat. Cras vitae blandit magna, vitae porta justo. Morbi elementum, arcu id ullamcorper sagittis, elit quam laoreet elit, elementum congue lectus tortor vel eros. Vestibulum tempus tristique est, vitae congue urna dictum a. Vestibulum vehicula, ipsum condimentum laoreet aliquam, eros augue placerat dolor, ac commodo nisi ante non mauris. In libero diam, ultrices id eleifend sit amet, pretium vitae tellus.
-
-                    Ut faucibus maximus turpis ac tincidunt. Sed imperdiet libero non sem bibendum congue. Nulla facilisi. Nullam non neque efficitur, tempor arcu et, fermentum dolor. Phasellus malesuada sit amet erat aliquam mollis. Nunc felis magna, malesuada eu vulputate id, rutrum in mauris. Aenean at enim dignissim, convallis libero at, gravida nunc. Vestibulum vel nibh eu ipsum malesuada venenatis. Mauris ut libero quam. Quisque nisl enim, facilisis id mattis tempus, varius non tellus. Curabitur lacinia ante at suscipit malesuada. Cras vel placerat lectus. Duis facilisis ligula euismod mauris egestas interdum. Donec ipsum nulla, viverra nec gravida at, suscipit sit amet dui. Suspendisse quis sapien a sapien finibus consectetur. Curabitur egestas velit vel neque imperdiet, ut consequat leo tincidunt.
-
-                    Curabitur et turpis sagittis, suscipit quam quis, maximus est. Praesent ut efficitur tortor, vel scelerisque est. Sed laoreet iaculis risus non iaculis. Praesent eu dignissim libero, a varius dolor. Morbi tempus venenatis augue, ac porta metus sodales id. Aliquam dictum ornare placerat. Vivamus elementum blandit laoreet. Etiam mauris magna, condimentum vel dignissim a, luctus ac sapien. Mauris faucibus semper justo. Proin in ligula pharetra, tincidunt urna vel, ultrices metus. Aenean sit amet nunc pretium, iaculis magna eu, scelerisque orci. Suspendisse sem odio, auctor eu rutrum id, aliquet in tellus.
-
-                    Donec vulputate, enim vitae porta dignissim, libero lectus egestas dolor, ut maximus nunc quam nec lectus. Duis id ex ut massa mattis rutrum eget sed est. Sed accumsan faucibus mauris, nec volutpat magna sagittis nec. Sed sodales nulla dolor, nec pulvinar nisi mattis dignissim. Aliquam accumsan pulvinar leo, ut eleifend purus. Aliquam quis turpis vel odio suscipit ornare. Aenean imperdiet ut est id vehicula. Pellentesque interdum ipsum nec nulla dignissim tempus. Aenean tempor mauris ut sem tempus, non hendrerit nulla gravida. Nulla laoreet libero mi, quis facilisis orci maximus ut. Ut dignissim tempus elit, in tempor urna. Aenean nunc leo, fringilla vel faucibus nec, sodales sit amet urna. Nullam neque nisl, interdum non ligula sed, condimentum tristique purus.
-
-                    Suspendisse suscipit sem at orci laoreet, eget mollis mi dapibus. Cras at sodales eros. Nullam condimentum nunc ut lacus vulputate fringilla. Integer consequat, est molestie efficitur volutpat, justo erat mollis mi, eu imperdiet ex leo nec velit. Donec hendrerit posuere semper. Sed molestie sed augue eget auctor. Cras eget risus ut ipsum rhoncus vestibulum. Morbi gravida lectus vel metus congue rutrum.
-
-                    Quisque fringilla tristique lorem, eu consectetur diam faucibus laoreet. Integer sed congue massa. Nulla libero leo, sodales et condimentum vitae, lobortis quis eros. Integer nisi augue, accumsan ac elementum ut, aliquam nec odio. Aliquam a condimentum arcu, eget suscipit mauris. Fusce dolor enim, consequat id leo at, sagittis lobortis ante. Quisque a suscipit dui. Cras nec est vulputate, imperdiet dui et, dignissim neque. Maecenas sed velit id turpis eleifend lobortis a vitae mi. Aliquam porta diam ac venenatis molestie. Vivamus in pharetra ipsum.
-
-                    Etiam euismod elementum commodo. Ut tempus elit quis facilisis auctor. Suspendisse accumsan vestibulum lacus in condimentum. Nulla vel justo in magna tempus auctor. Mauris vestibulum purus eget condimentum tincidunt. Suspendisse laoreet euismod viverra. Proin eros orci, malesuada vel consectetur ut, dictum sit amet lorem. Sed tempus orci pretium ante lobortis blandit.
-
-                    Morbi consequat ut mi a euismod. Aenean a nisl eget arcu iaculis bibendum a at sapien. Nam imperdiet augue sed imperdiet imperdiet. Vivamus quis sollicitudin diam. Curabitur at consectetur elit. Pellentesque semper ornare odio, quis efficitur justo suscipit id. Cras vel porttitor ex. Fusce molestie ex sit amet massa luctus, vitae varius velit hendrerit. Nulla consequat nunc eget leo molestie egestas. Quisque viverra tellus ut rutrum luctus. In in mollis arcu, sed vestibulum tellus. Mauris ullamcorper erat eu hendrerit sagittis.
-                </p>
-            </section>
-
             <section className="highlights-container">
-                <h1>Highlights</h1>
+                <h1>Öne Çıkanlar</h1>
                 <div className="inner-highlist-container">
                     <figure className="highlight-figure">
-                        <img src={placeHolderImg} alt="" className="highlight-img"></img >
-                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nulla metus. Ut congue ultrices elementum. Curabitur pulvinar commodo magna. Quisque nec lorem dolor. Nullam finibus dolor quis cursus tempus. Nulla nec massa ac enim posuere efficitur. Nam auctor turpis sagittis nulla semper varius ac sed nulla. Ut vitae neque.</figcaption>
+                        <img src={image4} alt="" className="highlight-img"></img >
+                        <figcaption></figcaption>
                     </figure>
                     <figure className="highlight-figure">
-                        <img src={placeHolderImg} alt="" className="highlight-img"></img >
-                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nulla metus. Ut congue ultrices elementum. Curabitur pulvinar commodo magna. Quisque nec lorem dolor. Nullam finibus dolor quis cursus tempus. Nulla nec massa ac enim posuere efficitur. Nam auctor turpis sagittis nulla semper varius ac sed nulla. Ut vitae neque.</figcaption>
+                        <img src={image1} alt="" className="highlight-img"></img >
+                        <figcaption></figcaption>
                     </figure>
                     <figure className="highlight-figure">
-                        <img src={placeHolderImg} alt="" className="highlight-img"></img >
-                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nulla metus. Ut congue ultrices elementum. Curabitur pulvinar commodo magna. Quisque nec lorem dolor. Nullam finibus dolor quis cursus tempus. Nulla nec massa ac enim posuere efficitur. Nam auctor turpis sagittis nulla semper varius ac sed nulla. Ut vitae neque.</figcaption>
+                        <img src={image2} alt="" className="highlight-img"></img >
+                        <figcaption></figcaption>
                     </figure>
                     <figure className="highlight-figure">
-                        <img src={placeHolderImg} alt="" className="highlight-img"></img >
-                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nulla metus. Ut congue ultrices elementum. Curabitur pulvinar commodo magna. Quisque nec lorem dolor. Nullam finibus dolor quis cursus tempus. Nulla nec massa ac enim posuere efficitur. Nam auctor turpis sagittis nulla semper varius ac sed nulla. Ut vitae neque.</figcaption>
-                    </figure>
-                    <figure className="highlight-figure">
-                        <img src={placeHolderImg} alt="" className="highlight-img"></img >
-                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nulla metus. Ut congue ultrices elementum. Curabitur pulvinar commodo magna. Quisque nec lorem dolor. Nullam finibus dolor quis cursus tempus. Nulla nec massa ac enim posuere efficitur. Nam auctor turpis sagittis nulla semper varius ac sed nulla. Ut vitae neque.</figcaption>
-                    </figure>
-                    <figure className="highlight-figure">
-                        <img src={placeHolderImg} alt="" className="highlight-img"></img >
-                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nulla metus. Ut congue ultrices elementum. Curabitur pulvinar commodo magna. Quisque nec lorem dolor. Nullam finibus dolor quis cursus tempus. Nulla nec massa ac enim posuere efficitur. Nam auctor turpis sagittis nulla semper varius ac sed nulla. Ut vitae neque.</figcaption>
-                    </figure>
-                    <figure className="highlight-figure">
-                        <img src={placeHolderImg} alt="" className="highlight-img"></img >
-                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nulla metus. Ut congue ultrices elementum. Curabitur pulvinar commodo magna. Quisque nec lorem dolor. Nullam finibus dolor quis cursus tempus. Nulla nec massa ac enim posuere efficitur. Nam auctor turpis sagittis nulla semper varius ac sed nulla. Ut vitae neque.</figcaption>
-                    </figure>
-                    <figure className="highlight-figure">
-                        <img src={placeHolderImg} alt="" className="highlight-img"></img >
-                        <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at nulla metus. Ut congue ultrices elementum. Curabitur pulvinar commodo magna. Quisque nec lorem dolor. Nullam finibus dolor quis cursus tempus. Nulla nec massa ac enim posuere efficitur. Nam auctor turpis sagittis nulla semper varius ac sed nulla. Ut vitae neque.</figcaption>
-                    </figure>
+                        <img src={image3} alt="" className="highlight-img"></img >
+                        <figcaption></figcaption>
+                    </figure>         
                 </div>
             </section>
             <section className="links-to-used-tools-container">

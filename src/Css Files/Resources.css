@@ -1,3 +1,4 @@
+
 .resources-page-container {
     font-weight: 500;
     font-style: italic;
@@ -118,6 +119,10 @@
     height: 40vh;
     border-radius: 20px;
     border: 5px solid #A1BA89;
+    transition: all 1s;
+}
+.highlight-img:hover{
+    transform: scale(1.2);
 }
 .link-anchor{
     text-decoration: none;

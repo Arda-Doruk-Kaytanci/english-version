@@ -161,9 +161,6 @@ const OptimizationSystem = () => {
         if (!Array.isArray(weatherData) || weatherData.length === 0) {
             throw new Error("Geçersiz hava durumu verisi sağlandı.");
         }
-        if (isNaN(balconyArea) || balconyArea <= 0) {
-            throw new Error("Geçersiz balkon alanı sağlandı.");
-        }
 
         const reversedTemperatures = [...weatherData].reverse();
 
@@ -298,13 +295,48 @@ const OptimizationSystem = () => {
             devices: prev.devices.filter((_, i) => i !== index),
         }));
     };
-
+    const options = {
+        responsive: true,
+        plugins: {
+            legend: {
+                labels: {
+                    font: {
+                        size: 16,
+                        family: "Arial",
+                        style: "italic",
+                    },
+                    color: "black",
+                },
+            },
+        },
+        scales: {
+            x: {
+                ticks: {
+                    font: {
+                        size: 14,
+                        family: "Courier New",
+                    },
+                    color: "black",
+                },
+            },
+            y: {
+                ticks: {
+                    font: {
+                        size: 14,
+                        family: "Courier New",
+                    },
+                    color: "black",
+                },
+            },
+        },
+    };
     const DeviceAdder = ({ device, index }) => {
         return (
             <div className="device-adder">
                 <label>
                     Cihaz Adı
                     <input
+                        className="device-input"
                         type="text"
                         defaultValue={device.name}
                         onBlur={(e) => handleInputChange(e, index, "name")}
@@ -313,6 +345,7 @@ const OptimizationSystem = () => {
                 <label>
                     Saatlik Watt
                     <input
+                        className="device-input"
                         type="number"
                         defaultValue={device.watt}
                         onBlur={(e) => handleInputChange(e, index, "watt")}
@@ -321,12 +354,13 @@ const OptimizationSystem = () => {
                 <label>
                     Günlük Kullanım
                     <input
+                        className="device-input"
                         type="number"
                         defaultValue={device.hours}
                         onBlur={(e) => handleInputChange(e, index, "hours")}
                     />
                 </label>
-                <button type="button" onClick={() => removeDevice(index)}>
+                <button type="button" className="delete-btn" onClick={() => removeDevice(index)}>
                     Sil
                 </button>
             </div>
@@ -370,7 +404,7 @@ const OptimizationSystem = () => {
                 {
                     label: "Energy Usage (kWh)",
                     data: response.energy_usage,
-                    borderColor: "rgba(75,192,192,1)",
+                    borderColor: "#92BDA3",
                     backgroundColor: "rgba(75,192,192,0.2)",
                     fill: true,
                 },
@@ -469,8 +503,8 @@ const OptimizationSystem = () => {
                 {
                     label: "Projected Temperature",
                     data: estimateNext10Years(weather.daily.temperature_2m_mean, altitude),
-                    backgroundColor: "rgba(75,192,192,0.6)",
-                    borderColor: "rgba(75,192,192,1)",
+                    backgroundColor: "#92BDA3",
+                    borderColor: "black",
                     borderWidth: 1,
                 }
             ]
@@ -489,8 +523,8 @@ const OptimizationSystem = () => {
                 {
                     label: "Occurrences",
                     data: animalData.map((animal) => animal.occurrences || 0),
-                    backgroundColor: "rgba(75,192,192,0.6)",
-                    borderColor: "rgba(75,192,192,1)",
+                    backgroundColor: "#92BDA3",
+                    borderColor: "black",
                     borderWidth: 1,
                 },
             ],
@@ -599,15 +633,12 @@ const OptimizationSystem = () => {
 
     return (
 
-        <div>
-            <h1>Optimization System</h1>
+        <div className="optimize">
             <form onSubmit={handleSubmit}>
-                <br />
-                <br />
-                <button type="button" onClick={createMoreDeviceAdder}>
-                    Add Device
+                <button type="button" className="add-device" onClick={createMoreDeviceAdder}>
+                    Cihaz Ekle
                 </button>
-                <div id="deviceAdderContainer">
+                <div id="device-adder-container">
                     {inputs.devices.map((device, index) => (
                         <DeviceAdder
                             key={index}
@@ -616,72 +647,77 @@ const OptimizationSystem = () => {
                         />
                     ))}
                 </div>
-                <br />
-                <label>
-                    Floor:
-                    <input
-                        type="number"
-                        name="floor"
-                        value={inputs.floor}
-                        onChange={handleInputChange}
-                    />
-                </label>
-                <br />
-                <label>
-                    Context Size (m²):
-                    <input
-                        type="number"
-                        name="area"
-                        value={inputs.area}
-                        onChange={handleInputChange}
-                    />
-                </label>
-                <label>
-                    Balkon Alanı (m²):
-                    <input
-                        type="number"
-                        name="balcony_size"
-                        value={inputs.balcony_size}
-                        onChange={handleInputChange}
-                    />
-                </label>
-                <br />
-                <br />
-                <button type="submit" disabled={loading}>
-                    {loading ? "Processing..." : "Submit"}
-                </button>
+                <div className="form-container">
+                    <label>
+                        <p>
+                            Kaçıncı Kaçttasınız:
+                        </p>
+                        <input
+                            className="optimize-input"
+                            type="number"
+                            name="floor"
+                            value={inputs.floor}
+                            onChange={handleInputChange}
+                        />
+                    </label>
+                    <label>
+                        <p>
+                            Alanınız (m²)
+                        </p>
+
+                        <input
+                            className="optimize-input"
+                            type="number"
+                            name="area"
+                            value={inputs.area}
+                            onChange={handleInputChange}
+                        />
+                    </label>
+                    <label>
+                        <p>
+                            Balkon Alanı (m²):
+                        </p>
+                        <input
+                            type="number"
+                            name="balcony_size"
+                            value={inputs.balcony_size}
+                            onChange={handleInputChange}
+                        />
+                    </label>
+                    <button type="submit" id="submit-btn" disabled={loading}>
+                        {loading ? "Processing..." : "Submit"}
+                    </button>
+                </div>
             </form>
             {error && <p style={{ color: "red" }}>{error}</p>}
 
             {response && (
-                <div>
-                    <h2>Results</h2>
-                    <p>Altitude: {response.altitude} meters</p>
-                    {recommendPlants(weather.daily.temperature_2m_mean, inputs.balcony_size).map((plant) => {
-                        return (
-                            <li>
-                                {plant.name}
-                                <br></br>
-                                {plant.description}
-                                <br></br>
-                                {plant.spaceRequirement}
-                                <br></br>
-                                {plant.amount}
-                            </li>
-                        )
-                    })}
+                <div className="response-container">
+                    <h2>Sonuçlar</h2>
+                    <div className="crops-container">
+                        {recommendPlants(weather.daily.temperature_2m_mean, inputs.balcony_size).map((plant, index) => {
+                            return (
+                                <li className="crop-li" key={index}>
+                                    Bitki Adı: {plant.name}
+                                    <br></br>
+                                    Açıklama: {plant.description}
+                                    <br></br>
+                                    Bitki için Gerekli Alan: {plant.spaceRequirement}
+                                    <br></br>
+                                    Kaç Tane Ekebilirsin: {plant.amount}
+                                </li>
+                            )
+                        })}
+                    </div>
                     {response && response.energy_usage && (
-                        <Line data={generateEnergyUsageChartData()} />
+                        <Line options={options} data={generateEnergyUsageChartData()} />
                     )}
 
                     {animalData && animalData.length > 0 && (
-                        <Bar data={generateBiodiversityChartData()} />
+                        <Bar options={options} data={generateBiodiversityChartData()} />
                     )}
 
-                    <p>
-                        Projected Yearly Usage:{" "}
-                        <Bar data={generateProjectedYearsChart()}></Bar>
-                    </p>
+                        <Bar options={options} data={generateProjectedYearsChart()}></Bar>
                 </div>
             )}
         </div>

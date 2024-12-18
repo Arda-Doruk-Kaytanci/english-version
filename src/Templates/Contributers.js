@@ -14,10 +14,9 @@ function Contributers() {
             </p>
             <h1>Katkıda Bulunanlar</h1>
             <section className="contributers-container">
+                <Contributer name="Aynur Elif Kekeç"></Contributer>
                 <Contributer name="Arda Doruk Kaytancı"></Contributer>
             </section>
-            <h1>Honorable Mention</h1>
-            <section></section>
         </div>
     )
 }
