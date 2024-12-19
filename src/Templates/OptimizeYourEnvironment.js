@@ -402,7 +402,7 @@ const OptimizationSystem = () => {
             ),
             datasets: [
                 {
-                    label: "Energy Usage (kWh)",
+                    label: "Enerji Kullanımı (kWh)",
                     data: response.energy_usage,
                     borderColor: "#92BDA3",
                     backgroundColor: "rgba(75,192,192,0.2)",
@@ -501,7 +501,7 @@ const OptimizationSystem = () => {
             labels: generateNext10Years(),
             datasets: [
                 {
-                    label: "Projected Temperature",
+                    label: "Tahmini Sıcaklıklar",
                     data: estimateNext10Years(weather.daily.temperature_2m_mean, altitude),
                     backgroundColor: "#92BDA3",
                     borderColor: "black",
@@ -521,7 +521,7 @@ const OptimizationSystem = () => {
             labels: animalData.map((animal) => (animal.commonName === "Unknown" ? animal.species : animal.commonName) || animal.species || "Unknown"),
             datasets: [
                 {
-                    label: "Occurrences",
+                    label: "Ne Kadar Sık",
                     data: animalData.map((animal) => animal.occurrences || 0),
                     backgroundColor: "#92BDA3",
                     borderColor: "black",
