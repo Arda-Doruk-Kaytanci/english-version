@@ -411,17 +411,13 @@ const OptimizationSystem = () => {
             ],
         };
     };
-    function estimateNext10Years(temperatureData, elevation) {
+    function estimateNext10Years(temperatureData) {
         const currentYear = new Date().getFullYear();
         const startYear = currentYear - 30;
         const endYear = currentYear;
 
         if (!Array.isArray(temperatureData) || temperatureData.length === 0) {
             throw new Error("Invalid temperature data provided.");
-        }
-
-        if (isNaN(elevation)) {
-            throw new Error("Invalid elevation provided.");
         }
 
         const totalDays = temperatureData.length;
@@ -462,11 +458,10 @@ const OptimizationSystem = () => {
 
 
         const lapseRate = -6.5 / 1000;
-        const elevationAdjustment = lapseRate;
 
         const next10Years = [];
         for (let i = endYear + 1; i <= endYear + 10; i++) {
-            const predictedTemp = slope * i + intercept + elevationAdjustment;
+            const predictedTemp = slope * i + intercept + lapseRate;    
             next10Years.push(predictedTemp);
         }
 
