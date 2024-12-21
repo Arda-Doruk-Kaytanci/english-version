@@ -545,29 +545,8 @@ const OptimizationSystem = () => {
                 taxonId: result.taxon?.id,
             }));
 
-
-            const speciesDetailsPromises = speciesCounts.map(async (speciesData) => {
-                if (!speciesData.taxonId) return speciesData;
-
-                try {
-                    const taxonResponse = await axios.get(`https://api.inaturalist.org/v1/taxa/${speciesData.taxonId}`);
-                    const taxonData = taxonResponse.data.results[0];
-
-                    return {
-                        ...speciesData,
-                        habitat: taxonData.habitat || "Unknown",
-                        conservationStatus: taxonData.conservation_status?.status || "Not Evaluated",
-                        distribution: taxonData.range || "Unknown",
-                    };
-                } catch (error) {
-                    console.error(`Error fetching details for ${speciesData.species}:`, error);
-                    return speciesData;
-                }
-            });
-
-            const speciesDetails = await Promise.all(speciesDetailsPromises);
-            setAnimalData(speciesDetails);
-            console.log(speciesDetails)
+            setAnimalData(speciesCounts);
+            console.log(speciesCounts)
         } catch (error) {
             console.error("Error fetching biodiversity data:", error);
             setError("Failed to fetch biodiversity data.");
