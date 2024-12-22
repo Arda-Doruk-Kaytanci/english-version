@@ -76,11 +76,6 @@ const OptimizationSystem = () => {
         { name: "Maydanoz", suitableFor: "ılıman", spaceRequirement: 0.5, description: "Küçük balkonlarda kolayca yetişir." },
         { name: "Dereotu", suitableFor: "ılıman", spaceRequirement: 0.5, description: "Küçük balkonlarda kolayca yetişir, mutfakta kullanılabilir." },
         { name: "Çilek", suitableFor: "ılıman", spaceRequirement: 1, description: "Küçük alanlarda kolayca yetişir, tatlı ve lezzetli meyveler sunar." },
-        { name: "Elma Ağacı", suitableFor: "soğuk", spaceRequirement: 15, description: "Soğuk iklimlerde büyük alanlarda yetişir." },
-        { name: "Şeftali Ağacı", suitableFor: "ılıman", spaceRequirement: 10, description: "Orta ila büyük balkonlarda yetişebilir." },
-        { name: "Limon Ağacı", suitableFor: "sıcak", spaceRequirement: 10, description: "Sıcak iklimlerde büyük balkonlar için mükemmel bir seçimdir." },
-        { name: "Zeytin Ağacı", suitableFor: "sıcak", spaceRequirement: 12, description: "Büyük alanlar ve sıcak iklimler için idealdir." },
-        { name: "Kayısı Ağacı", suitableFor: "ılıman", spaceRequirement: 10, description: "Orta büyüklükte balkonlarda yetişebilir." },
         { name: "Karpuz", suitableFor: "sıcak", spaceRequirement: 5, description: "Büyük alanlarda yetişir, sıcak iklimlerde büyür." },
         { name: "Üzüm Asması", suitableFor: "ılıman", spaceRequirement: 3, description: "Gölge sağlayan dekoratif bir bitkidir." },
         { name: "Tropikal Çiçekler", suitableFor: "sıcak", spaceRequirement: 3, description: "Büyük, güneşli balkonlarda güzel dekoratif bitkiler." },
@@ -99,10 +94,7 @@ const OptimizationSystem = () => {
         { name: "Çam Fidanı", suitableFor: "soğuk", spaceRequirement: 20, description: "Soğuk iklimlerde büyük alanlar için uygundur." },
         { name: "Zencefil", suitableFor: "sıcak", spaceRequirement: 2, description: "Sıcak iklimlerde yetişir ve tıbbi faydalar sağlar." },
         { name: "Nar", suitableFor: "ılıman", spaceRequirement: 8, description: "Dekoratif bir ağaç, ılıman iklimlerde yetişir." },
-        { name: "Muz Ağacı", suitableFor: "sıcak", spaceRequirement: 10, description: "Sıcak iklimlerde büyük balkonlar için idealdir." },
-        { name: "Fındık Ağacı", suitableFor: "soğuk", spaceRequirement: 15, description: "Soğuk iklimlerde büyük alanlar için uygundur." },
         { name: "Ahududu", suitableFor: "ılıman", spaceRequirement: 3, description: "Tatlı meyve, orta büyüklükte balkonlar için uygundur." },
-        { name: "Kiraz Ağacı", suitableFor: "ılıman", spaceRequirement: 12, description: "Büyük balkonlar için uygundur." },
         { name: "Böğürtlen", suitableFor: "ılıman", spaceRequirement: 2, description: "Orta büyüklükte balkonlar için uygundur." },
         { name: "Ananas", suitableFor: "sıcak", spaceRequirement: 6, description: "Sıcak iklimlerde yetişir, dikkatli bakım gerektirir." },
         { name: "Hardal", suitableFor: "ılıman", spaceRequirement: 2, description: "Baharat bitkisi olarak yetiştirilir." },
@@ -110,16 +102,12 @@ const OptimizationSystem = () => {
         { name: "Kekik", suitableFor: "ılıman", spaceRequirement: 1, description: "Küçük balkonlarda kolayca yetişir." },
         { name: "Kavun", suitableFor: "ılıman", spaceRequirement: 4, description: "Büyük balkonlarda yetişir ve sıcak yazlarda büyüme gösterir." },
         { name: "Turp", suitableFor: "soğuk", spaceRequirement: 1, description: "Küçük balkonlarda ve soğuk iklimlerde yetişebilir." },
-        { name: "Armut Ağacı", suitableFor: "ılıman", spaceRequirement: 12, description: "Orta ve büyük balkonlar için uygundur." },
-        { name: "Nar Ağacı", suitableFor: "ılıman", spaceRequirement: 10, description: "Ilıman iklimlerde küçük alanlarda yetişebilir." },
         { name: "Brokoli", suitableFor: "soğuk", spaceRequirement: 2, description: "Soğuk iklimlerde yetişen besleyici bir sebzedir." },
         { name: "Enginar", suitableFor: "ılıman", spaceRequirement: 3, description: "Güneşli balkonlarda büyüyen dayanıklı bir bitkidir." },
         { name: "Papaya", suitableFor: "sıcak", spaceRequirement: 8, description: "Sıcak iklimlerde ve geniş balkonlarda yetişebilir." },
         { name: "Avokado", suitableFor: "sıcak", spaceRequirement: 12, description: "Sıcak iklimlerde büyük balkonlarda yetişir." },
-        { name: "Erik Ağacı", suitableFor: "ılıman", spaceRequirement: 10, description: "Orta ve geniş balkonlar için uygundur." },
         { name: "Kayısı", suitableFor: "ılıman", spaceRequirement: 8, description: "Ilıman iklimlerde balkonlarda yetişen tatlı bir meyvedir." },
         { name: "Fesleğen Mor", suitableFor: "ılıman", spaceRequirement: 0.5, description: "Dekoratif bir bitkidir ve mutfaklarda sıkça kullanılır." },
-        { name: "Defne Ağacı", suitableFor: "ılıman", spaceRequirement: 5, description: "Büyük balkonlar için uygundur, hoş bir aroma yayar." },
         { name: "Çam Fıstığı", suitableFor: "soğuk", spaceRequirement: 20, description: "Soğuk iklimlerde geniş alanlarda yetişir." },
         { name: "Kivi", suitableFor: "ılıman", spaceRequirement: 6, description: "Tırmanıcı yapısıyla dikey alanlar için uygundur." },
         { name: "Ananas", suitableFor: "sıcak", spaceRequirement: 5, description: "Tropik balkonlarda yetişir ve dikkatli bakım gerektirir." },
@@ -136,16 +124,12 @@ const OptimizationSystem = () => {
         { name: "Melisa", suitableFor: "ılıman", spaceRequirement: 0.5, description: "Hoş bir kokuya sahip, küçük alanlarda yetişir." },
         { name: "Tere", suitableFor: "soğuk", spaceRequirement: 0.5, description: "Soğuk iklimlerde küçük balkonlarda yetişebilir." },
         { name: "Lahana", suitableFor: "soğuk", spaceRequirement: 3, description: "Soğuk iklimlerde geniş alanlarda yetişir." },
-        { name: "Ihlamur Ağacı", suitableFor: "ılıman", spaceRequirement: 15, description: "Büyük alanlarda yetişebilen hoş kokulu bir ağaçtır." },
         { name: "Mango", suitableFor: "sıcak", spaceRequirement: 12, description: "Tropik iklimlerde ve geniş balkonlarda yetişebilir." },
-        { name: "Ceviz Ağacı", suitableFor: "soğuk", spaceRequirement: 25, description: "Soğuk iklimlerde geniş alanlar için uygundur." },
         { name: "Kavun", suitableFor: "sıcak", spaceRequirement: 6, description: "Sıcak yaz aylarında yetişen tatlı bir meyvedir." },
         { name: "Anason", suitableFor: "ılıman", spaceRequirement: 0.5, description: "Tıbbi ve mutfak kullanımı için uygundur." },
         { name: "Kekik Dağ", suitableFor: "soğuk", spaceRequirement: 0.5, description: "Dağ iklimine uygun, az yer kaplayan bir bitkidir." },
-        { name: "Portakal Ağacı", suitableFor: "ılıman", spaceRequirement: 8, description: "Orta ve büyük balkonlarda yetişebilir." },
         { name: "Böğürtlen", suitableFor: "ılıman", spaceRequirement: 2, description: "Tatlı meyve veren, orta büyüklükte balkonlar için uygundur." },
         { name: "Ahududu", suitableFor: "ılıman", spaceRequirement: 2, description: "Orta büyüklükte balkonlarda yetişebilen tatlı bir bitkidir." },
-        { name: "Fındık Ağacı", suitableFor: "soğuk", spaceRequirement: 20, description: "Soğuk iklimlerde büyük alanlar için uygundur." },
         { name: "Lale", suitableFor: "ılıman", spaceRequirement: 0.5, description: "Dekoratif bir çiçek, küçük balkonlarda yetişebilir." },
         { name: "Nane Çeşitleri", suitableFor: "ılıman", spaceRequirement: 0.5, description: "Farklı nane türleri küçük alanlarda yetişir." },
         { name: "Papatya", suitableFor: "ılıman", spaceRequirement: 0.5, description: "Küçük alanlarda yetişen hoş kokulu bir bitkidir." },
@@ -153,8 +137,6 @@ const OptimizationSystem = () => {
         { name: "Börülce", suitableFor: "ılıman", spaceRequirement: 1, description: "Orta büyüklükte balkonlarda yetişebilir." },
         { name: "Kivi Asması", suitableFor: "ılıman", spaceRequirement: 6, description: "Orta büyüklükte balkonlarda gölge sağlayabilir." },
         { name: "Ebegümeci", suitableFor: "ılıman", spaceRequirement: 1, description: "Tıbbi özellikleri olan ve kolayca yetişen bir bitkidir." },
-        { name: "Çam Sakızı", suitableFor: "soğuk", spaceRequirement: 25, description: "Soğuk iklimlere uygun büyük alanlarda yetişir." },
-        { name: "Nane Çayı", suitableFor: "ılıman", spaceRequirement: 0.5, description: "Mutfak kullanımı için ideal küçük balkon bitkisi." }
     ];
 
     function recommendPlants(weatherData, balconyArea) {
@@ -398,7 +380,7 @@ const OptimizationSystem = () => {
         return {
             labels: Array.from(
                 { length: response.energy_usage.length },
-                (_, i) => `Day ${i + 1}`
+                (_, i) => `Gün ${i + 1}`
             ),
             datasets: [
                 {
@@ -461,7 +443,7 @@ const OptimizationSystem = () => {
 
         const next10Years = [];
         for (let i = endYear + 1; i <= endYear + 10; i++) {
-            const predictedTemp = slope * i + intercept + lapseRate;    
+            const predictedTemp = slope * i + intercept + lapseRate;
             next10Years.push(predictedTemp);
         }
 
@@ -691,7 +673,7 @@ const OptimizationSystem = () => {
                         <Bar options={options} data={generateBiodiversityChartData()} />
                     )}
 
-                        <Bar options={options} data={generateProjectedYearsChart()}></Bar>
+                    <Bar options={options} data={generateProjectedYearsChart()}></Bar>
                 </div>
             )}
         </div>
