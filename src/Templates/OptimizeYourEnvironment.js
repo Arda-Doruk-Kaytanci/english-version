@@ -62,7 +62,7 @@ const OptimizationSystem = () => {
         return `${year}-${paddedMonth}-${paddedDay}`;
     };
 
-    const [animalData, setAnimalData] = useState([])
+    const [livingData, setLivingData] = useState([])
 
     const plantDatabase = [
         { name: "Domates", suitableFor: "ılıman", spaceRequirement: 2, description: "Orta veya büyük balkonlar için uygundur. Bol güneş ışığına ihtiyaç duyar." },
@@ -489,17 +489,17 @@ const OptimizationSystem = () => {
     };
 
     const generateBiodiversityChartData = () => {
-        console.log(animalData)
-        if (!Array.isArray(animalData) || animalData.length === 0) {
-            console.error("animalData is invalid:", animalData);
+        console.log(livingData)
+        if (!Array.isArray(livingData) || livingData.length === 0) {
+            console.error("livingData is invalid:", livingData);
             return {};
         }
         return {
-            labels: animalData.map((animal) => (animal.commonName === "Unknown" ? animal.species : animal.commonName) || animal.species || "Unknown"),
+            labels: livingData.map((animal) => (animal.commonName.toUpperCase() === "Unknown" ? animal.species : animal.commonName.toUpperCase()) || animal.species || "Unknown"),
             datasets: [
                 {
                     label: "Ne Kadar Sık",
-                    data: animalData.map((animal) => animal.occurrences || 0),
+                    data: livingData.map((animal) => animal.occurrences || 0),
                     backgroundColor: "#92BDA3",
                     borderColor: "black",
                     borderWidth: 1,
@@ -515,7 +515,7 @@ const OptimizationSystem = () => {
                     lat: latitude,
                     lng: longitude,
                     radius,
-                    per_page: 10,
+                    per_page: 20,
                 },
             });
 
@@ -527,7 +527,7 @@ const OptimizationSystem = () => {
                 taxonId: result.taxon?.id,
             }));
 
-            setAnimalData(speciesCounts);
+            setLivingData(speciesCounts);
             console.log(speciesCounts)
         } catch (error) {
             console.error("Error fetching biodiversity data:", error);
@@ -669,7 +669,7 @@ const OptimizationSystem = () => {
                         <Line options={options} data={generateEnergyUsageChartData()} />
                     )}
 
-                    {animalData && animalData.length > 0 && (
+                    {livingData && livingData.length > 0 && (
                         <Bar options={options} data={generateBiodiversityChartData()} />
                     )}
 
