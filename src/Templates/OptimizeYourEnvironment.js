@@ -641,7 +641,7 @@ const OptimizationSystem = () => {
                         />
                     </label>
                     <button type="submit" id="submit-btn" disabled={loading}>
-                        {loading ? "Processing..." : "Submit"}
+                        {loading ? "Hesaplanıyor" : "Hesapla"}
                     </button>
                 </div>
             </form>

@@ -1,0 +1,11 @@
+.search-filter-input {
+    margin-top: 5rem;
+    width: 20%;
+    height: 2rem;
+    text-justify: auto;
+    padding: 0.2rem;
+    border-radius: 5px;
+    background-color: #A1BA89;
+    display: flex;
+    justify-self: center;
+}
