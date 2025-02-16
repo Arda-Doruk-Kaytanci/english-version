@@ -84,37 +84,30 @@ function HomePage() {
     return (
         <div>
             <Flashbang />
-            <section className="article-widget-container">
-                <ArticleWidget link="/articles/article-1" name="Gösterge Türlerin Ekosistemdeki Rolü dair görsel" img={article1Img} figcaption="Gösterge Türlerin Ekosistemdeki Rolü" />
-                <ArticleWidget link="/articles/article-2" name="Pc-Ord ile ilgili görsel" img={article2Img} figcaption="Pc-Ord Uygulaması" />
-                <ArticleWidget link="/articles/article-3" name="Biyoloji ve sürdürebilir bir ekosisteme ait görsel" img={article3Img} figcaption="Biyoloji ile Sürdürebilir Sistem" />
-            </section>
-
-
             <section className="warning-section-container">
                 <section className="warning-section left">
                     <figure>
                         <img className="img deso" src={img4} alt="a desolated land" />
                         <figcaption>
-                            Böyle bir dünya mı istiyorsun?
+                            Do you want a world like this?
                             <br />
-                            Karanlıkta, nefessiz, umutsuz, cansız...
+                            Dark, breathless, hopeless, lifeless...
                         </figcaption>
                     </figure>
                     <figure>
                         <img className="img deso" src={img5} alt="a desolated land" />
                         <figcaption>
-                            İstemiyorsun değil mi?
+                            You don't want that, do you?
                             <br />
-                            Ben de istemezdim. Hem neden isteyeyim.
+                            I wouldn’t want it either. Why would I?
                         </figcaption>
                     </figure>
                     <figure>
                         <img className="img deso" src={img6} alt="a desolated land" />
                         <figcaption>
-                            O zaman unutma şunu hala geç değil.
+                            Then remember, it's still not too late.
                             <br />
-                            Hala umut var, geç olmadan harekete geç.
+                            There is still hope, take action before it's too late.
                         </figcaption>
                     </figure>
                 </section>
@@ -126,34 +119,35 @@ function HomePage() {
                     <figure>
                         <img className="img forest" src={img3} alt="a forest" />
                         <figcaption ref={desoRef}>
-                            Evet! Dediğim gibi böyle bir dünya mümkün.
+                            Yes! Like I said, a world like this is possible.
                             <br />
-                            Ve yakında.
+                            And soon.
                         </figcaption>
                     </figure>
                     <figure>
                         <img className="img forest" src={img7} alt="a forest" />
                         <figcaption>
-                            Hem de ulaşması zor da değil.
+                            And it’s not even hard to reach.
                             <br />
-                            Hadi sen de başla.
+                            Come on, start now.
                         </figcaption>
                     </figure>
                     <figure>
                         <img className="img bottom" src={img8} alt="a forest" />
                         <figcaption>
-                            O aydınlık gelecekler uğruna çalışmaya.
+                            Work for that bright future.
                             <br />
-                            Peki ne yapacaksın?
+                            So, what will you do?
                         </figcaption>
                     </figure>
                 </section>
             </section>
             <section className="ribbon-container">
-                <Link to="/save-us" className="ribbon">Kurtar Bizi</Link>
+                <Link to="/save-us" className="ribbon">Save Us</Link>
             </section>
-        </div >
+        </div>
     );
+    
 }
 
 export default HomePage;

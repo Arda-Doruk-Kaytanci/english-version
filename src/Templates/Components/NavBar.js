@@ -32,42 +32,35 @@ const NavBar = forwardRef((props, ref) => {
             to="/"
             style={{ color: isHere("/") ? "#34623F" : "#A1BA89" }}
           >
-            Ana Sayfa
+            Homepage
           </Link>
           <Link
             className="nav-bar-link"
             to="/save-us"
             style={{ color: isHere("/save-us") ? "#34623F" : "#A1BA89" }}
           >
-            Kurtar Bizi
+            Save us
           </Link>
           <Link
             className="nav-bar-link"
             to="/informations"
             style={{ color: isHere("/informations") ? "#34623F" : "#A1BA89" }}
           >
-            Bilgiler
+            Info
           </Link>
           <Link
             className="nav-bar-link"
             to="/get-educated"
             style={{ color: isHere("/get-educated") ? "#34623F" : "#A1BA89" }}
           >
-            Bilinçlen
+            Be Informed
           </Link>
           <Link
             className="nav-bar-link"
             to="/contributers"
             style={{ color: isHere("/contributers") ? "#34623F" : "#A1BA89" }}
           >
-            Yapanlar
-          </Link>
-          <Link
-            className="nav-bar-link"
-            to="/crops"
-            style={{ color: isHere("/crops") ? "#34623F" : "#A1BA89" }}
-          >
-            Bitkiler
+            Contributers
           </Link>
         </nav>
       </div>

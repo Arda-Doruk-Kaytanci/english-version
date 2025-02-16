@@ -1,24 +1,34 @@
 import React from "react";
-import "../Css Files/Contributers.css"
+import "../Css Files/Contributers.css";
 import Contributer from "./Components/Contributer";
 
 function Contributers() {
-    return (
-        <div className="contributers-page">
-            <h1>Teşekkürler</h1>
-            <p>
-                Bu proje, farklı yeteneklere ve bilgi birikimlerine sahip insanların bir araya gelerek oluşturduğu bir topluluğun ürünü. Her bir katkı sağlayan, projemizin daha iyiye ulaşması için değerli zamanını, bilgisini ve yaratıcı enerjisini paylaştı. Kod geliştirmeden tasarıma, içerik oluşturmadan hata raporlamaya kadar her alanda destek veren bu topluluğun katkıları olmadan, bugün olduğumuz noktada olamazdık.
-                Amacımız, katkı sağlayanlarımızın emeklerini vurgulamak ve onlara projeye kattıkları değer için teşekkür etmek. Siz de bu topluluğa katılarak bilgi birikiminizi ve yeteneklerinizi paylaşmak isterseniz, katkı sağlama süreciyle ilgili ayrıntılara göz atabilirsiniz. Hep birlikte, daha iyi ve daha güçlü bir proje inşa etmeye devam ediyoruz.
-                <br></br>
-                Katkıda bulunan herkese içtenlikle teşekkür ederiz!
-            </p>
-            <h1>Katkıda Bulunanlar</h1>
-            <section className="contributers-container">
-                <Contributer name="Aynur Elif Kekeç"></Contributer>
-                <Contributer name="Arda Doruk Kaytancı"></Contributer>
-            </section>
-        </div>
-    )
+  return (
+    <div className="contributers-page">
+      <h1>Thank You</h1>
+      <p>
+        This project is the result of a community formed by people with diverse
+        skills and knowledge coming together. Each contributor shared their
+        valuable time, knowledge, and creative energy to help improve our
+        project. Without the support of this community in every aspect, from
+        code development to design, from content creation to bug reporting, we
+        wouldn’t be where we are today. Our goal is to highlight the efforts of
+        our contributors and thank them for the value they’ve added to the
+        project. If you would like to join this community and share your
+        knowledge and skills, you can check out the details on how to
+        contribute. Together, we continue to build a better and stronger
+        project.
+        <br></br>
+        We sincerely thank everyone who contributed!
+      </p>
+      <h1>Contributors</h1>
+
+      <section className="contributers-container">
+        <Contributer name="Aynur Elif Kekeç"></Contributer>
+        <Contributer name="Arda Doruk Kaytancı"></Contributer>
+      </section>
+    </div>
+  );
 }
 
-export default Contributers
+export default Contributers;

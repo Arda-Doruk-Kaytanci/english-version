@@ -8,13 +8,13 @@ function Footer() {
             <div className="footer-custom-shape-container">
                 <div className="footer-custom-shape doruk">
                     <div>
-                        <h2>İletişim Bilgileri</h2>
+                        <h2>Contact Info</h2>
                         <h3>ardadorukkaytanci@gmail.com</h3>
                         <h3>+90 533 427 46 33</h3>
                     </div>
-                    <button id="remove-storage" onClick={() => { localStorage.clear() }}>Animasyonları tekrar görmek için tıkla</button>
+                    <button id="remove-storage" onClick={() => { localStorage.clear() }}>Click to see the animations again</button>
                     <div>
-                        <h2>Yapımcı</h2>
+                        <h2>Contributers</h2>
                         <h3>Arda Doruk Kaytancı</h3>
                         <h3>Aynur Elif Kekeç</h3>
                     </div>
