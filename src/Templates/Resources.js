@@ -36,7 +36,7 @@ function Resources() {
       </section>
 
       <section className="used-tools-display">
-        <h1>Kullandığımız Araçlar</h1>
+        <h1>Tools We Have Used</h1>
         <div className="used-tools-container right">
           <img src={htmllogo} alt="" className="highlight-img"></img>
           <p>

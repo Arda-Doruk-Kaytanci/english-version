@@ -1053,7 +1053,7 @@ const OptimizationSystem = () => {
 
       {response && (
         <div className="response-container">
-          <h2>Sonuçlar</h2>
+          <h2>Results</h2>
           <div className="crops-container">
             {recommendPlants(
               weather.daily.temperature_2m_mean,
